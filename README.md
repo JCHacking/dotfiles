@@ -26,4 +26,4 @@ I am uploading them in case they can serve as inspiration to someone, but I do n
 
 ## Screenshots
 
-![Screenshot]()
+![Screenshot](screenshot.png)
