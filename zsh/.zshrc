@@ -1,3 +1,5 @@
+export GPG_TTY=$(tty)
+
 if [ -r ~/.cache/p10k-instant-prompt-${(%):-%n}.zsh ]; then
     source ~/.cache/p10k-instant-prompt-${(%):-%n}.zsh
 fi

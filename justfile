@@ -1,4 +1,4 @@
-modules := "alacritty bat delta git google-chrome imv lsd nvim spotify sway sworkstyle waybar wofi xdg zsh"
+modules := "alacritty bat delta git google-chrome gpg imv lsd nvim spotify sway sworkstyle waybar wofi xdg zsh"
 
 default: apply
 

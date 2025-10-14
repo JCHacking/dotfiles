@@ -12,6 +12,7 @@ I am uploading them in case they can serve as inspiration to someone, but I do n
 - delta
 - git
 - google-chrome
+- gpg
 - imv
 - lsd
 - neovim
