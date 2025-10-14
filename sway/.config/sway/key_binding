@@ -28,8 +28,9 @@ bindsym $mod+Shift+$right move right
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$down move down
 
-bindsym $mod+r mode "RESIZE"
-mode "RESIZE" {
+set $mode_resize "RESIZE"
+bindsym $mod+r mode $mode_resize
+mode $mode_resize {
     bindsym $left resize shrink width 10px
     bindsym $right resize grow width 10px
     bindsym $up resize shrink height 10px
@@ -95,9 +96,17 @@ bindsym $mod+BracketRight exec pamixer -d 1
 bindsym $mod+Backslash exec pamixer -t
 bindsym $mod+Apostrophe exec pavucontrol
 
-# Notifications
-bindsym $mod+Shift+n exec swaync-client -t -sw
-
 # Screenshots
 bindsym Print exec grimshot --cursor save anything
 bindsym Shift+Print exec grimshot --cursor copy anything
+
+# Shutdowq
+set $mode_shutdown "SHUTDOWN -(S)Poweroff -(R)Reboot"
+bindsym $mod+Shift+e mode $mode_shutdown
+mode $mode_shutdown {
+    bindsym s exec poweroff
+    bindsym r exec reboot
+
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
