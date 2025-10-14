@@ -1,0 +1,24 @@
+# Main Monitor
+set $main-monitor DP-2
+
+output $main-monitor mode 1920x1080@144hz position 1920,0
+
+workspace 1 output $main-monitor
+workspace 3 output $main-monitor
+workspace 5 output $main-monitor
+workspace 7 output $main-monitor
+workspace 9 output $main-monitor
+
+focus output $main-monitor
+
+
+# Secondary Monitor
+set $secondary-monitor HDMI-A-1
+
+output $secondary-monitor mode 1920x1080@60hz position 0,0
+
+workspace 2 output $secondary-monitor
+workspace 4 output $secondary-monitor
+workspace 6 output $secondary-monitor
+workspace 8 output $secondary-monitor
+workspace 10 output $secondary-monitor

@@ -1,0 +1,39 @@
+# Border
+default_border pixel 1
+
+# Gaps
+smart_gaps on
+
+gaps inner 5px
+gaps outer 5px
+
+
+# Colors
+set $color-background $292b2e
+set $color-blue #1976d2
+set $color-blue-dark #0d47a1
+set $color-grey-light #fafafa
+set $color-red #900000
+
+# Property Name           Border (TOP)           Background             Text			Indicator		Child Border
+client.focused            $color-blue-dark       $color-blue-dark	$color-grey-light	$color-blue-dark	$color-blue-dark
+client.focused_inactive   $color-blue	         $color-blue		$color-grey-light	$color-blue		$color-blue
+client.unfocused          $color-blue            $color-blue		$color-grey-light	$color-blue		$color-blue
+client.urgent		  $color-red             $color-red		$color-grey-light	$color-red		$color-red
+client.background	  $color-background
+
+
+# Background Image
+output * bg /usr/share/backgrounds/archlinux/simple.png fill
+
+
+# Themes
+exec {
+    gsettings set org.gnome.desktop.interface gtk-theme "Qogir-Round-Dark"
+    gsettings set org.gnome.desktop.interface icon-theme "Qogir-Dark"
+    gsettings set org.gnome.desktop.interface cursor-theme "Qogir-cursors"
+    gsettings set org.gnome.desktop.interface cursor-size 20
+    gsettings set org.gnome.desktop.interface font-name "JetBrainsMono Nerd Font 11"
+}
+
+seat seat0 xcursor_theme "Qogir-cursors"

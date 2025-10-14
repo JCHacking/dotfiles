@@ -1,0 +1,127 @@
+{
+    "layer": "bottom",
+    "position": "top",
+
+    "modules-left": [
+        "sway/workspaces",
+        "sway/scratchpad",
+        "sway/mode"
+    ],
+    "modules-center": [
+        "clock#dayofweek",
+        "clock#time",
+        "clock#date"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "disk#root",
+        "disk#home",
+        "network",
+	    "sway/language",
+        "pulseaudio",
+        "tray"
+    ],
+
+    "sway/workspaces": {
+	    "all-outputs": false
+    },
+
+    "sway/scratchpad": {
+	    "format": "  {count}"
+    },
+
+    "sway/mode": {
+        "format": "{}",
+        "tooltip": false
+    },
+
+    "clock#dayofweek": {
+        "format": "{:%a}"
+    },
+    "clock#time": {
+	    "format": "{:%H:%M}"
+    },
+    "clock#date": {
+	    "format": "{:%d-%m-%y}"
+    },
+
+    "cpu": {
+        "interval": 5,
+
+        "format": "{icon} {usage:2}%",
+        "format-icons": {
+            "default": ""
+        },
+
+        "states": {
+            "critical": 90
+        }
+    },
+
+    "memory": {
+        "interval": 5,
+
+        "format": "{icon} {percentage}%/{swapPercentage}%",
+        "format-icons": {
+            "default": ""
+        },
+        "tooltip-format": "Mem: {used:0.2f}GiB used\nSwap: {swapUsed:0.2f}GiB used",
+
+        "states": {
+            "critical": 90
+        }
+    },
+
+    "disk#root": {
+        "path": "/",
+        "format": " {percentage_used}%",
+        "states": {
+            "critical": 90
+        }
+    },
+    "disk#home": {
+        "path": "/home",
+        "format": " {percentage_used}%",
+        "states": {
+            "critical": 90
+        }
+    },
+
+    "network": {
+        "interval": 5,
+
+        "format-ethernet": "  ↑ {bandwidthUpBits} ↓ {bandwidthDownBits}",
+        "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr} via {gwaddr}",
+
+        "format-wifi": "  ↑ {bandwidthUpBits} ↓ bandwidthDownBits}",
+        "tooltip-format-wifi": "{ifname}: {essid} {ipaddr}/{cidr} via {gwaddr}"
+    },
+
+    "sway/language": {
+	    "format": "  {short}",
+	    "tooltip": false
+    },
+
+
+    "pulseaudio": {
+        "format": "{icon} {volume:2}%",
+        "format-muted": "  MUTE",
+
+        "format-icons": {
+            "headphone": " ",
+            "default": [ " ", " ", " " ]
+        },
+
+        "tooltip": false,
+
+        "on-click": "pavucontrol",
+        "on-click-right": "pamixer -t"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 5
+    }
+}
+

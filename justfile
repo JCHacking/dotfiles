@@ -1,0 +1,21 @@
+modules := "alacritty bat delta git google-chrome imv lsd nvim spotify sway sworkstyle waybar wofi xdg zsh"
+
+default: apply
+
+apply:
+    @echo "⚙ Applying dotfiles for: {{ modules }}..."
+    @stow --verbose --target={{ home_directory() }} --restow {{ modules }}
+    @echo "------------------------------------------"
+    @echo "Dotfiles applied successfully ✅"
+
+unapply:
+    @echo "🗑 Unapplying dotfiles for: {{ modules }}..."
+    @stow --verbose --target={{ home_directory() }} --delete {{ modules }}
+    @echo "------------------------------------------"
+    @echo "Dotfiles unapplied successfully ✅"
+
+update: unapply && apply
+    @echo "🚀 Updating dotfiles for: {{ modules }}..."
+    @git pull
+    @echo "Dotfiles updated successfully ✅"
+

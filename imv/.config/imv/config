@@ -1,0 +1,4 @@
+[options]
+background = #292b2e
+overlay = true
+overlay_font = "JetBrainsMono Nerd Font:11"

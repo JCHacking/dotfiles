@@ -1,0 +1,16 @@
+window {
+    border: 1px solid #0d47a1;
+    background-color: #292b2e;
+    color: #fafafa;
+    font: 15 "JetBrainsMono Nerd Font";
+}
+
+#input {
+    border-radius: 0;
+    margin: 5px;
+}
+
+#entry:selected {
+    background-color: #1976d2;
+    border-radius: 0;
+}

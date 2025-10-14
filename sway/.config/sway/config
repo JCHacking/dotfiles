@@ -1,0 +1,8 @@
+include /etc/sway/config.d/*
+
+include ~/.config/sway/application
+include ~/.config/sway/key_binding
+include ~/.config/sway/keyboard
+include ~/.config/sway/monitor
+include ~/.config/sway/theme
+
