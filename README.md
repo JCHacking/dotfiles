@@ -17,6 +17,7 @@ I am uploading them in case they can serve as inspiration to someone, but I do n
 - lsd
 - neovim
 - spotify
+- ssh
 - sway
 - sworkstyle
 - waybar
