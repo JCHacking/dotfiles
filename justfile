@@ -15,7 +15,7 @@ unapply:
     @echo "Dotfiles unapplied successfully ✅"
 
 update: unapply && apply
-    @echo "🚀 Updating dotfiles for: {{ modules }}..."
+    @echo "🚀 Updating dotfiles..."
     @git pull
     @echo "Dotfiles updated successfully ✅"
 
