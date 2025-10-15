@@ -96,6 +96,10 @@ bindsym $mod+BracketRight exec pamixer -d 1
 bindsym $mod+Backslash exec pamixer -t
 bindsym $mod+Apostrophe exec pavucontrol
 
+# Notifications
+bindsym $mod+n exec makoctl dismiss
+bindsym $mod+Shift+n exec makoctl dismiss --all
+
 # Screenshots
 bindsym Print exec grimshot --cursor save anything
 bindsym Shift+Print exec grimshot --cursor copy anything
