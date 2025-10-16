@@ -1,3 +1,5 @@
+fallback = ''
+
 [matching]
 KeePassXC = ""
 "/Transmission/" = ""
