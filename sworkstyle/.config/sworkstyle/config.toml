@@ -1,6 +1,6 @@
-fallback = ''
+fallback = ""
 
 [matching]
 KeePassXC = ""
 "/Transmission/" = ""
-
+"virt-manager" = "▣"

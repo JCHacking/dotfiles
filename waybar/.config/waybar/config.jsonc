@@ -90,7 +90,7 @@
     },
     "disk#virt": {
         "path": "/mnt/virt",
-        "format": "▣ {percentage_used}%",
+        "format": " {percentage_used}%",
         "states": {
             "critical": 90
         }
