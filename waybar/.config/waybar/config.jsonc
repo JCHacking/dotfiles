@@ -17,6 +17,7 @@
         "memory",
         "disk#root",
         "disk#home",
+        "disk#virt",
         "network",
 	    "sway/language",
         "pulseaudio",
@@ -87,6 +88,13 @@
             "critical": 90
         }
     },
+    "disk#virt": {
+        "path": "/mnt/virt",
+        "format": "▣ {percentage_used}%",
+        "states": {
+            "critical": 90
+        }
+    },
 
     "network": {
         "interval": 5,
@@ -102,7 +110,6 @@
 	    "format": "  {short}",
 	    "tooltip": false
     },
-
 
     "pulseaudio": {
         "format": "{icon} {volume:2}%",
