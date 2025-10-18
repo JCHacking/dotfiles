@@ -1,6 +1,5 @@
 exec autotiling-rs
 exec mako
-exec swaync
 exec sworkstyle
 
 exec cliphist wipe
