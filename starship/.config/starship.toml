@@ -5,10 +5,10 @@ $os\
 $username\
 [](bg:color-background fg:color-accent)\
 $directory\
-[](bg:color-git fg:color-background)\
+[](bg:color-accent fg:color-background)\
 $git_branch\
 $git_status\
-[](color-git)\
+[](color-accent)\
 $fill\
 [](color-background)\
 $status\
@@ -26,7 +26,6 @@ color-accent = "#1976d2"
 color-alert = "#900000"
 color-background = "#292b2e"
 color-foreground = "#fafafa"
-color-git = "#ff9800"
 
 [os]
 disabled = false
@@ -51,13 +50,13 @@ truncate_to_repo = false
 [git_branch]
 disabled = false
 format = "[ $symbol $branch ]($style)"
-style = "bold bg:color-git fg:color-foreground"
+style = "bold bg:color-accent fg:color-foreground"
 symbol = ""
 
 [git_status]
 disabled = false
 format = "[$ahead_behind$conflicted$untracked$stashed$renamed$modified$deleted$typechanged$staged]($style)"
-style = "bold bg:color-git fg:color-foreground"
+style = "bold bg:color-accent fg:color-foreground"
 conflicted = "  ${count} "
 ahead = "  ${count} "
 behind = "  ${count} "
