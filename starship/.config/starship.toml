@@ -1,0 +1,98 @@
+"$schema" = "https://starship.rs/config-schema.json"
+format = """\
+[](color-accent)\
+$os\
+$username\
+[](bg:color-background fg:color-accent)\
+$directory\
+[](bg:color-git fg:color-background)\
+$git_branch\
+$git_status\
+[](color-git)\
+$fill\
+[](color-background)\
+$status\
+[](bg:color-background fg:color-accent)\
+$cmd_duration\
+[](color-accent)\
+$line_break\
+$character\
+"""
+add_newline = true
+palette = "jchacking"
+
+[palettes.jchacking]
+color-accent = "#1976d2"
+color-alert = "#900000"
+color-background = "#292b2e"
+color-foreground = "#fafafa"
+color-git = "#ff9800"
+
+[os]
+disabled = false
+style = "bold bg:color-accent fg:color-foreground"
+[os.symbols]
+Arch = "󰣇"
+
+[username]
+disabled = false
+show_always = true
+format = "[ $user ]($style)"
+style_root = "bold bg:color-accent fg:color-alert"
+style_user = "bold bg:color-accent fg:color-foreground"
+
+[directory]
+disabled = false
+format = "[ $path ]($style)"
+style = "bold bg:color-background fg:color-foreground"
+truncation_length = 0
+truncate_to_repo = false
+
+[git_branch]
+disabled = false
+format = "[ $symbol $branch ]($style)"
+style = "bold bg:color-git fg:color-foreground"
+symbol = ""
+
+[git_status]
+disabled = false
+format = "[$ahead_behind$conflicted$untracked$stashed$renamed$modified$deleted$typechanged$staged]($style)"
+style = "bold bg:color-git fg:color-foreground"
+conflicted = "  ${count} "
+ahead = "  ${count} "
+behind = "  ${count} "
+diverged = "  ${ahead_count}  ${behind_count} "
+up_to_date = "  "
+untracked = "  ${count} " 
+stashed = "  ${count} "	
+modified = "  ${count} "
+staged = "  ${count} "	
+renamed = "  ${count} "
+deleted = "  ${count} "
+typechanged = "  "
+
+[fill]
+symbol = " "
+
+[status]
+disabled = false
+format = "[ $symbol$signal_name$status ]($style)"
+style = "bold bg:color-background fg:color-foreground"
+failure_style = "bold bg:color-background fg:color-alert"
+map_symbol = true
+symbol = "❌"
+success_symbol = " "
+sigint_symbol = "⚡"
+signal_symbol = "⚡"
+
+[cmd_duration]
+format = "[ $duration ]($style)"
+style = "bold bg:color-accent fg:color-foreground"
+min_time = 0
+show_milliseconds = true
+
+[character]
+disabled = false
+success_symbol = "[  ](bold fg:color-accent)"
+error_symbol = "[  ](bold fg:color-accent)"
+vimcmd_symbol = "[  ](bold fg:color-accent)"

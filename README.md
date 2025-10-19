@@ -20,6 +20,7 @@ I am uploading them in case they can serve as inspiration to someone, but I do n
 - podman
 - spotify
 - ssh
+- starship
 - sway
 - sworkstyle
 - waybar
