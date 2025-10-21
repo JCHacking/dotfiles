@@ -1,4 +1,4 @@
-modules := "alacritty bat delta git google-chrome gpg imv lsd mako nvim podman spotify ssh starship sway sworkstyle waybar wofi xdg zsh"
+modules := "alacritty bat cargo delta git google-chrome gpg imv lsd mako nvim podman spotify ssh starship sway sworkstyle waybar wofi xdg zsh"
 
 _default: apply
 
