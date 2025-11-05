@@ -41,6 +41,9 @@
 [pretty]
     log = %Cred%h%Creset - %C(yellow)%ai%Creset -%C(auto)%d%Creset %s %C(bold blue)<%an>%Creset
 
+[push]
+    autoSetupRemote = true
+
 [receive]
     fsckobjects = true
 
