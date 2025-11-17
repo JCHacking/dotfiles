@@ -6,6 +6,7 @@ $username\
 [](bg:color-background fg:color-accent)\
 $directory\
 ([$git_branch$git_status](bg:color-git fg:color-background))\
+([$python](bg:color-python fg:prev_bg))\
 [](prev_bg)\
 
 $fill\
@@ -29,6 +30,7 @@ color-alert = "#900000"
 color-background = "#292b2e"
 color-foreground = "#fafafa"
 color-git = "#ff9800"
+color-python = "#3b8bbe"
 
 [os]
 disabled = false
@@ -72,6 +74,13 @@ staged = "  ${count} "
 renamed = "  ${count} "
 deleted = "  ${count} "
 typechanged = "  "
+
+[python]
+disabled = false
+format = "[ $symbol $version( $virtualenv) ]($style)"
+style = "bold bg:color-python fg:color-foreground"
+version_format="v$major.$minor"
+symbol = ""
 
 [fill]
 symbol = " "
