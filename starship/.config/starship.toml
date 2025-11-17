@@ -7,6 +7,7 @@ $username\
 $directory\
 ([$git_branch$git_status](bg:color-git fg:color-background))\
 ([$python](bg:color-python fg:prev_bg))\
+([$rust](bg:color-rust fg:prev_bg))\
 [](prev_bg)\
 
 $fill\
@@ -31,6 +32,7 @@ color-background = "#292b2e"
 color-foreground = "#fafafa"
 color-git = "#ff9800"
 color-python = "#3b8bbe"
+color-rust = "#dea584"
 
 [os]
 disabled = false
@@ -79,8 +81,15 @@ typechanged = "  "
 disabled = false
 format = "[ $symbol $version( $virtualenv) ]($style)"
 style = "bold bg:color-python fg:color-foreground"
-version_format="v$major.$minor"
+version_format = "v$major.$minor"
 symbol = ""
+
+[rust]
+disabled = false
+format = "[ $symbol $version ]($style)"
+style = "bold bg:color-rust fg:color-foreground"
+version_format = "v$major.$minor"
+symbol = " "
 
 [fill]
 symbol = " "
