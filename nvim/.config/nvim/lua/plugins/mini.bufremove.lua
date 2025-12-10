@@ -1,4 +1,4 @@
--- Manage Buffers
+-- Manage Remove Buffers
 
 return {
     "nvim-mini/mini.bufremove",
