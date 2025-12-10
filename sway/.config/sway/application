@@ -1,15 +1,19 @@
 exec autotiling-rs
 exec mako
+exec playerctld daemon
 exec sworkstyle
 
+# Clipboard
 exec cliphist wipe
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 
+# Bar
 bar {
     id default
     swaybar_command waybar
     position top
 }
 
+# Launcher
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 10

@@ -11,7 +11,7 @@ bindsym $mod+Shift+b exec pkill -SIGUSR1 waybar
 # Terminal
 bindsym $mod+Return exec alacritty
 
-# Apps
+# Launcher
 bindsym $mod+d exec wofi --show drun
 bindsym $mod+Shift+d exec cliphist list | wofi --show dmenu --allow-images | cliphist decode | wl-copy
 
@@ -91,10 +91,32 @@ bindsym $mod+Shift+9 move container to workspace number 9, workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10, workspace number 10
 
 # Volume
+bindsym XF86AudioRaiseVolume exec pamixer -i 1
 bindsym $mod+BracketLeft exec pamixer -i 1
+
+bindsym XF86AudioLowerVolume exec pamixer -d 1
 bindsym $mod+BracketRight exec pamixer -d 1
+
+bindsym XF86AudioMute exec pamixer -t
 bindsym $mod+Backslash exec pamixer -t
+
 bindsym $mod+Apostrophe exec pavucontrol
+
+# Player
+bindsym $mod+XF86AudioPrev exec playerctld unshift && notify-send "Controlling the $(playerctl -l | head -n1) player" --app-name playerctld
+bindsym $mod+Shift+Prior exec playerctld unshift && notify-send "Controlling the $(playerctl -l | head -n1) player" --app-name playerctld
+
+bindsym $mod+XF86AudioNext exec playerctld shift && notify-send "Controlling the $(playerctl -l | head -n1) player" --app-name playerctld
+bindsym $mod+Shift+Next exec playerctld shift && notify-send "Controlling the $(playerctl -l | head -n1) player" --app-name playerctld
+
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym $mod+Pause exec --no-startup-id playerctl play-pause
+
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym $mod+Prior exec --no-startup-id playerctl previous
+
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym $mod+Next exec --no-startup-id playerctl next
 
 # Notifications
 bindsym $mod+n exec makoctl dismiss
