@@ -3,7 +3,6 @@ vim.g.mapleader = " "  -- Set SPACE for leader key
 -- Buffers
 vim.keymap.set("n", "<leader>n", "<cmd>bnext<CR>", { desc = "Go to the next buffer" })
 vim.keymap.set("n", "<leader>p", "<cmd>bprev<CR>", { desc = "Go to the previous buffer" })
-vim.keymap.set("n", "<leader>q", "<cmd>bdelete<CR>", { desc = "Close current buffer" })
 
 -- Tabs
 vim.keymap.set("n", "<leader>tn", "<cmd>tabnext<CR>", { desc = "Go to the next tab" })
