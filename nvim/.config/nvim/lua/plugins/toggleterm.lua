@@ -15,6 +15,6 @@ return {
             "<cmd>ToggleTerm<CR>",
             mode = {"n", "t"},
             desc = "Open/Close Terminal",
-        }
+        },
     },
 }
