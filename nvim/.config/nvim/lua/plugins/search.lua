@@ -1,11 +1,10 @@
 return {
     "junegunn/fzf",
+    event = "VeryLazy",
 
     dependencies = {
         "junegunn/fzf.vim"
     },
-
-    event = "VeryLazy",
 
     keys = {
         { "<leader>ff", "<cmd>Files<CR>", desc = "Search file by name" },

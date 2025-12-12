@@ -3,7 +3,6 @@ return {
     {
         "shaunsingh/nord.nvim",
         lazy = false,
-        priority = 1000,
 
         dependencies = {
             "nvim-treesitter/nvim-treesitter",
@@ -17,7 +16,6 @@ return {
     -- Improve Colors
     {
         "NvChad/nvim-colorizer.lua",
-
         event = { "BufReadPre", "BufNewFile" },
 
         opts = {},
@@ -34,7 +32,6 @@ return {
     -- Indent Line
     {
         "lukas-reineke/indent-blankline.nvim",
-
         event = { "BufReadPre", "BufNewFile" },
 
         main = "ibl",

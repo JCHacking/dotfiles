@@ -2,7 +2,6 @@ return {
     -- GIT Signs in code
     {
         "lewis6991/gitsigns.nvim",
-
         event = { "BufReadPre", "BufNewFile" },
 
         opts = {
@@ -69,13 +68,6 @@ return {
             "nvim-lua/plenary.nvim",
         },
 
-        cmd = {
-            "LazyGit",
-            "LazyGitConfig",
-            "LazyGitCurrentFile",
-            "LazyGitFilter",
-            "LazyGitFilterCurrentFile",
-        },
         keys = {
             { "<leader>g", "<cmd>LazyGit<CR>", desc = "Open/Close GIT UI" },
         },

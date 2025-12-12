@@ -1,6 +1,7 @@
 return {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
+    event = "VeryLazy",
 
     dependencies = {
         "nvim-lua/plenary.nvim",
@@ -9,8 +10,6 @@ return {
         "3rd/image.nvim", 
         "stevearc/dressing.nvim", 
     },
-
-    event = "VeryLazy",
 
     keys = {
         { "<leader>f", "<cmd>Neotree toggle<CR>", desc = "Open/Close file explorer" }

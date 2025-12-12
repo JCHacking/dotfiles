@@ -20,7 +20,6 @@ return {
             }
         },
 
-        cmd = { "DBUIToggle", "DBUIOpen", "DBUIWizard" },
         keys = {
             {
                 "<leader>db",
