@@ -1,13 +1,10 @@
--- Top and bottom status line
-
 return {
     "nvim-lualine/lualine.nvim",
+    lazy = false,
 
     dependencies = {
         "nvim-tree/nvim-web-devicons",
     },
-
-    lazy = false,
 
     opts = {
         tabline = {

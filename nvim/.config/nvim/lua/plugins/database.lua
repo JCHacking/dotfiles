@@ -1,18 +1,18 @@
--- DB
-
 return {
+    -- Core
     {
         "tpope/vim-dadbod",
         lazy = true,
     },
+
+    -- UI
     {
         "kristijanhusak/vim-dadbod-ui",
+        lazy = true,
 
         dependencies = {
             "tpope/vim-dadbod",
         },
-
-        lazy = true,
 
         opts = {
             default_text_options = {

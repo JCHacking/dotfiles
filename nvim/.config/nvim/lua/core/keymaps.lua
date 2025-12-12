@@ -14,6 +14,7 @@ vim.keymap.set("n", "<leader>h", "<C-w>h", { desc = "Move Left Window"})
 vim.keymap.set("n", "<leader>j", "<C-w>j", { desc = "Move Down Window"})
 vim.keymap.set("n", "<leader>k", "<C-w>k", { desc = "Move Up Window"})
 vim.keymap.set("n", "<leader>l", "<C-w>l", { desc = "Move Right Window"})
+
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically"})
 vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally"})
 vim.keymap.set("n", "<leader>s=", "<C-w>=", { desc = "Resize windows to make equal size"})
