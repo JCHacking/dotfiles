@@ -126,12 +126,13 @@ bindsym $mod+Shift+n exec makoctl dismiss --all
 bindsym Print exec grimshot --cursor save anything
 bindsym Shift+Print exec grimshot --cursor copy anything
 
-# Shutdowq
-set $mode_shutdown "SHUTDOWN -(S)Poweroff -(R)Reboot"
+# Shutdow
+set $mode_shutdown "SHUTDOWN -(S)Poweroff -(R)Reboot -(L)Lock"
 bindsym $mod+Shift+e mode $mode_shutdown
 mode $mode_shutdown {
     bindsym s exec poweroff
     bindsym r exec reboot
+    bindsym l exec swaylock, mode "default"
 
     bindsym Escape mode "default"
     bindsym Return mode "default"
