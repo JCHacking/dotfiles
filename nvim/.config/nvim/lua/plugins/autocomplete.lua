@@ -41,18 +41,20 @@ return {
 
             cmp.setup({
                 mapping = {
-                    ["<C-p>"] = cmp.mapping.select_prev_item(),
-                    ["<C-n>"] = cmp.mapping.select_next_item(),
+                    ["<C-p>"] = cmp.mapping(
+                        function(fallback)
+                            if cmp.visible() then
+                                cmp.select_prev_item() 
+                            elseif luasnip.jumpable(-1) then
+                                luasnip.jump(-1) 
+                            else
+                                fallback()
+                            end
+                        end, 
+                        { "i", "s" }
+                    ),
 
-                    ["<C-b>"] = cmp.mapping.scroll_docs(-5),
-                    ["<C-f>"] = cmp.mapping.scroll_docs(5),
-
-                    ["<C-e>"] = cmp.mapping.abort(),
-                    ["<CR>"] = cmp.mapping.confirm({ select = true }),
-                    ["<C-y>"] = cmp.mapping.confirm({ select = true }),
-                    ["<C-Space>"] = cmp.mapping.complete(),
-      
-                    ["<Tab>"] = cmp.mapping(
+                    ["<C-n>"] = cmp.mapping(
                         function(fallback)
                             if cmp.visible() then
                                 cmp.select_next_item() 
@@ -65,18 +67,13 @@ return {
                         { "i", "s" }
                     ),
 
-                    ["<S-Tab>"] = cmp.mapping(
-                        function(fallback)
-                            if cmp.visible() then
-                                cmp.select_prev_item() 
-                            elseif luasnip.jumpable(-1) then
-                                luasnip.jump(-1) 
-                            else
-                                fallback()
-                            end
-                        end, 
-                        { "i", "s" }
-                    ),
+                    ["<C-b>"] = cmp.mapping.scroll_docs(-5),
+                    ["<C-f>"] = cmp.mapping.scroll_docs(5),
+
+                    ["<C-e>"] = cmp.mapping.abort(),
+                    ["<CR>"] = cmp.mapping.confirm({ select = true }),
+                    ["<C-y>"] = cmp.mapping.confirm({ select = true }),
+                    ["<C-Space>"] = cmp.mapping.complete(),
                 },
 
                 snippet = {
