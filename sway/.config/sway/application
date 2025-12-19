@@ -2,6 +2,7 @@ exec autotiling-rs
 exec mako
 exec playerctld daemon
 exec sworkstyle
+exec swayidle -w timeout 300 'swaylock'
 
 # Clipboard
 exec cliphist wipe
