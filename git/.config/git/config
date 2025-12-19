@@ -18,6 +18,7 @@
     autocrlf = input
     editor = nvim
     eol = lf
+    excludefile = ~/.config/git/ignore
     pager = delta
 
 [diff]
