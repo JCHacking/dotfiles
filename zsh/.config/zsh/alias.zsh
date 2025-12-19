@@ -13,4 +13,3 @@ alias docker-compose="podman-compose"
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
-
