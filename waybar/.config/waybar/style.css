@@ -8,7 +8,7 @@
     border: none;
     border-radius: 3px;
     min-height: 0;
-    margin: 0.2em 0.3em 0.2em 0.3em;
+    margin: 0.2em 0.3em;
     padding: 0;
 
     color: @foreground;
@@ -35,10 +35,9 @@ window#waybar {
 #network,
 #pulseaudio,
 #tray {
-    background: @box-background;
+    padding: 0 0.6em;
 
-    padding-left: 0.6em;
-    padding-right: 0.6em;
+    background: @box-background;
 }
 
 #workspaces {
@@ -50,20 +49,12 @@ window#waybar {
     background: @box-selected-background
 }
 
-#workspaces button.urgent {
-    background: @urgent
-}
-
-#mode {
-    background: @urgent
-}
-
+#workspaces button.urgent,
+#mode,
 #cpu.critical,
 #memory.critical,
-#disk.critical {
-    background: @urgent;
+#disk.critical,
+#pulseaudio.muted {
+    background: @urgent
 }
 
-#pulseaudio.muted {
-    background: @urgent;
-}
