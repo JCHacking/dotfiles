@@ -1,7 +1,7 @@
 return {
     -- Color scheme
     {
-        "shaunsingh/nord.nvim",
+        "EdenEast/nightfox.nvim",
         lazy = false,
 
         dependencies = {
@@ -9,7 +9,7 @@ return {
         },
 
         init = function()
-            vim.cmd(":colorschem nord")
+            vim.cmd(":colorschem nightfox")
         end,
     },
 
