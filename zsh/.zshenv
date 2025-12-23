@@ -1,5 +1,5 @@
 export VISUAL=nvim
 export EDITOR=nvim
 
-path+=('/home/jchacking/.cargo/bin')
+path+=('$HOME/.cargo/bin')
 export PATH

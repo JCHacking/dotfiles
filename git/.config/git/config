@@ -1,7 +1,7 @@
 [user]
-    name = JCHacking
-    email = juancruzmencia@gmail.com
-    signingkey = juancruzmencia@gmail.com
+    name = {{username}}
+    email = {{email}}
+    signingkey = {{email}}
 
 [include]
     path = ~/.config/delta/config

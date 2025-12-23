@@ -1,0 +1,33 @@
+[helpers]
+
+[default.files]
+alacritty = "~/"
+bat = "~/"
+cargo = "~/"
+delta = "~/"
+git = "~/"
+google-chrome = "~/"
+gpg = "~/"
+imv = "~/"
+lazygit = "~/"
+lsd = "~/"
+mako = "~/"
+nvim = "~/"
+podman = "~/"
+spotify = "~/"
+ssh = "~/"
+starship = "~/"
+sway = "~/"
+swaylock = "~/"
+sworkstyle = "~/"
+waybar = "~/"
+wofi = "~/"
+xdg = "~/"
+zsh = "~/"
+
+[default.variables]
+username = "JCHacking"
+email = "juancruzmencia@gmail.com"
+
+[settings]
+default_target_type = "symbolic"
