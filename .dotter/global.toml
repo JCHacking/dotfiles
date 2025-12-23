@@ -27,7 +27,8 @@ zsh = "~/"
 
 [default.variables]
 username = "JCHacking"
+username_lowercase = "jchacking"
 email = "juancruzmencia@gmail.com"
 
 [settings]
-default_target_type = "symbolic"
+default_target_type = "automatic"
