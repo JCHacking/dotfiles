@@ -21,6 +21,7 @@
         "network",
 	    "sway/language",
         "pulseaudio",
+        "battery",
         "tray"
     ],
 
@@ -124,6 +125,20 @@
 
         "on-click": "pavucontrol",
         "on-click-right": "pamixer -t"
+    },
+
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": [" ", " ", "	", " "],
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-full": " {capacity}%",
+
+        "states": {
+            "good": 75,
+            "warning": 30,
+            "critial": 15
+        }
     },
 
     "tray": {
