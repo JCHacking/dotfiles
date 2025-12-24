@@ -24,7 +24,7 @@ set $secondary-monitor DP-1
 
 output $secondary-monitor mode 1920x1080@60hz position 0,0
 
-workspace 1 output $secondary-monitor $laptop-monitor
-workspace 2 output $secondary-monitor $laptop-monitor
-workspace 3 output $secondary-monitor $laptop-monitor
-workspace 4 output $secondary-monitor $laptop-monitor
+workspace 1 output $secondary-monitor 
+workspace 2 output $secondary-monitor
+workspace 3 output $secondary-monitor
+workspace 4 output $secondary-monitor
