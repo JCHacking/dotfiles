@@ -1,7 +1,6 @@
 packages = [
   "alacritty", 
   "bat",
-  "cargo",
   "delta",
   "git",
   "google-chrome",
@@ -25,4 +24,10 @@ packages = [
 ]
 
 [files]
-"sway/monitor.jchacking-pc" = "~/.config/sway/monitor"
+"sway/monitor.work-laptop" = "~/.config/sway/monitor"
+
+[variables]
+git.username = "jmencianaranjo-ionos"
+git.email = "jcmencia@arsys.es"
+ssh.username = "jmencianaranjo-ionos"
+

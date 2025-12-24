@@ -1,34 +1,89 @@
-[helpers]
-
-[default.files]
-alacritty = "~/"
-bat = "~/"
-cargo = "~/"
-delta = "~/"
-git = "~/"
-google-chrome = "~/"
-gpg = "~/"
-imv = "~/"
-lazygit = "~/"
-lsd = "~/"
-mako = "~/"
-nvim = "~/"
-podman = "~/"
-spotify = "~/"
-ssh = "~/"
-starship = "~/"
-sway = "~/"
-swaylock = "~/"
-sworkstyle = "~/"
-waybar = "~/"
-wofi = "~/"
-xdg = "~/"
-zsh = "~/"
-
-[default.variables]
-username = "JCHacking"
-username_lowercase = "jchacking"
-email = "juancruzmencia@gmail.com"
-
 [settings]
 default_target_type = "automatic"
+
+[alacritty.files]
+"alacritty/alacritty.toml" = "~/.config/alacritty/alacritty.toml"
+
+[bat.files]
+"bat/config" = "~/.config/bat/config"
+
+[cargo.files]
+"cargo/config.toml" = "~/.cargo/config.toml"
+
+[delta.files]
+"delta/config" = "~/.config/delta/config"
+
+[git.files]
+"git/commit.template.txt" = "~/.config/git/commit.template.txt"
+"git/config" = "~/.config/git/config"
+"git/ignore" = "~/.config/git/ignore"
+[git.variables]
+git.username = "JCHacking"
+git.email = "juancruzmencia@gmail.com"
+
+[google-chrome.files]
+"google-chrome/chrome-flags.conf" = "~/.config/chrome-flags.conf"
+
+[gpg.files]
+"gpg/gpg-agent.conf" = "~/.gnupg/gpg-agent.conf"
+
+[imv.files]
+"imv/config" = "~/.config/imv/config"
+
+[lazygit.files]
+"lazygit/config.yml" = "~/.config/lazygit/config.yml"
+
+[lsd.files]
+"lsd/config.yaml" = "~/.config/lsd/config.yaml"
+
+[mako.files]
+"mako/config" = "~/.config/mako/config"
+
+[nvim.files]
+"nvim/lua" = "~/.config/nvim/lua"
+"nvim/init.lua" = "~/.config/nvim/init.lua"
+
+[podman.files]
+"podman/storage.conf" = "~/.config/containers/storage.conf"
+
+[spotify.files]
+"spotify/spotify-launcher.conf" = "~/.config/spotify-launcher.conf"
+
+[ssh.files]
+"ssh/config" = "~/.ssh/config"
+[ssh.variables]
+ssh.username = "jchacking"
+
+[starship.files]
+"starship/starship.toml" = "~/.config/starship.toml"
+
+[sway.files]
+"sway/application" = "~/.config/sway/application"
+"sway/config" = "~/.config/sway/config"
+"sway/key_binding" = "~/.config/sway/key_binding"
+"sway/keyboard" = "~/.config/sway/keyboard"
+"sway/theme" = "~/.config/sway/theme"
+
+[swaylock.files]
+"swaylock/config" = "~/.config/swaylock/config"
+
+[sworkstyle.files]
+"sworkstyle/config.toml" = "~/.config/sworkstyle/config.toml"
+
+[waybar.files]
+"waybar/config.jsonc" = "~/.config/waybar/config.jsonc"
+"waybar/style.css" = "~/.config/waybar/style.css"
+
+[wofi.files]
+"wofi/config" = "~/.config/wofi/config"
+"wofi/style.css" = "~/.config/wofi/style.css"
+
+[xdg.files]
+"xdg/user-dirs.dirs" = "~/.config/user-dirs.dirs"
+"xdg/user-dirs.locale" = "~/.config/user-dirs.locale"
+
+[zsh.files]
+"zsh/config" = "~/.config/zsh/"
+"zsh/zshenv" = "~/.zshenv"
+"zsh/zshrc" = "~/.zshrc"
+
