@@ -127,9 +127,9 @@ bindsym Print exec grimshot --cursor save anything
 bindsym Shift+Print exec grimshot --cursor copy anything
 
 # Shutdow
-set $mode_shutdown "SHUTDOWN -(S)Poweroff -(R)Reboot -(L)Lock"
-bindsym $mod+Shift+e mode $mode_shutdown
-mode $mode_shutdown {
+set $mode_system "SYSTEM -(S)Poweroff -(R)Reboot -(L)Lock"
+bindsym $mod+Shift+e mode $mode_system
+mode $mode_system {
     bindsym s exec systemctl poweroff
     bindsym r exec systemctl reboot
     bindsym l exec swaylock, mode "default"
