@@ -1,7 +1,7 @@
 # Laptop Monitor
 set $laptop-monitor eDP-1 
 
-output $laptop-monitor mode 1920x1080@60hz position 3840,0
+output $laptop-monitor mode 1920x1080@60hz position 3840,0 scale 1.2
 
 workspace 9 output $laptop-monitor
 workspace 10 output $laptop-monitor
