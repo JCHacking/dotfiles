@@ -18,6 +18,7 @@ packages = [
   "sway",
   "swaylock",
   "sworkstyle",
+  "uwsm",
   "waybar",
   "wofi",
   "xdg",
@@ -26,3 +27,6 @@ packages = [
 
 [files]
 "sway/monitor.jchacking-pc" = "~/.config/sway/monitor"
+
+[variables]
+hardware.isGraphicNvidia = true

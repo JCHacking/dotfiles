@@ -70,6 +70,9 @@ ssh.username = "jchacking"
 [sworkstyle.files]
 "sworkstyle/config.toml" = "~/.config/sworkstyle/config.toml"
 
+[uwsm.files]
+"uwsm/env" = "~/.config/uwsm/env"
+
 [waybar.files]
 "waybar/config.jsonc" = "~/.config/waybar/config.jsonc"
 "waybar/style.css" = "~/.config/waybar/style.css"

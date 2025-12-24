@@ -17,6 +17,7 @@ packages = [
   "sway",
   "swaylock",
   "sworkstyle",
+  "uwsm",
   "waybar",
   "wofi",
   "xdg",
@@ -27,7 +28,7 @@ packages = [
 "sway/monitor.llw-185701" = "~/.config/sway/monitor"
 
 [variables]
+hardware.isGraphicNvidia = false
 git.username = "jmencianaranjo-ionos"
 git.email = "jcmencia@arsys.es"
 ssh.username = "jmencianaranjo-ionos"
-
