@@ -24,7 +24,7 @@ packages = [
 ]
 
 [files]
-"sway/monitor.work-laptop" = "~/.config/sway/monitor"
+"sway/monitor.llw-185701" = "~/.config/sway/monitor"
 
 [variables]
 git.username = "jmencianaranjo-ionos"
