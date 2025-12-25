@@ -84,6 +84,7 @@ ssh.username = "jchacking"
 [xdg.files]
 "xdg/user-dirs.dirs" = "~/.config/user-dirs.dirs"
 "xdg/user-dirs.locale" = "~/.config/user-dirs.locale"
+"xdg/xdg-terminals.list" = "~/.config/xdg-terminals.list"
 
 [zsh.files]
 "zsh/config" = "~/.config/zsh/"
