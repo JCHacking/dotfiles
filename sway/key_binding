@@ -125,6 +125,7 @@ bindsym $mod+Shift+n exec makoctl dismiss --all
 # Screenshots
 bindsym Print exec grimshot --cursor save anything
 bindsym Shift+Print exec grimshot --cursor copy anything
+bindsym $mod+Print exec pkill -SIGUSR1 wayscriber
 
 # Shutdow
 set $mode_system "SYSTEM -(S)Poweroff -(R)Reboot -(L)Lock"

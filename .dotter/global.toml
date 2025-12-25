@@ -78,6 +78,9 @@ ssh.username = "jchacking"
 "waybar/config.jsonc" = "~/.config/waybar/config.jsonc"
 "waybar/style.css" = "~/.config/waybar/style.css"
 
+[wayscriber.files]
+"wayscriber/config.toml" = "~/.config/wayscriber/config.toml"
+
 [wofi.files]
 "wofi/config" = "~/.config/wofi/config"
 "wofi/style.css" = "~/.config/wofi/style.css"

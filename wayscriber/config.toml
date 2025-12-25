@@ -1,0 +1,20 @@
+[drawing]
+default_color = "red"
+
+[ui]
+show_status_bar = false
+
+[ui.toolbar]
+top_pinned = false
+side_pinned = false
+show_actions_section = false
+show_settings_section = false
+show_preset_toast = false
+
+[capture]
+enabled = false
+
+[session]
+persist_transparent = true
+persist_whiteboard = true
+persist_blackboard = true
