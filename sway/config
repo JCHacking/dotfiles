@@ -5,4 +5,5 @@ include ~/.config/sway/key_binding
 include ~/.config/sway/keyboard
 include ~/.config/sway/monitor
 include ~/.config/sway/theme
+include ~/.config/sway/touchpad
 

@@ -63,6 +63,7 @@ ssh.username = "jchacking"
 "sway/key_binding" = "~/.config/sway/key_binding"
 "sway/keyboard" = "~/.config/sway/keyboard"
 "sway/theme" = "~/.config/sway/theme"
+"sway/touchpad" = "~/.config/sway/touchpad"
 
 [swaylock.files]
 "swaylock/config" = "~/.config/swaylock/config"
