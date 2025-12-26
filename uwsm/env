@@ -1,5 +1,4 @@
-export DG_SESSION_TYPE=wayland
-export XDG_CURRENT_DESKTOP=sway
+export ELECTRON_OZONE_PLATFORM_HINT=auto
 
 {{#if hardware.isGraphicNvidia}}
 export LIBVA_DRIVER_NAME=nvidia

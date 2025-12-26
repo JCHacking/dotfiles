@@ -21,9 +21,6 @@ default_target_type = "automatic"
 git.username = "JCHacking"
 git.email = "juancruzmencia@gmail.com"
 
-[google-chrome.files]
-"google-chrome/chrome-flags.conf" = "~/.config/chrome-flags.conf"
-
 [gpg.files]
 "gpg/gpg-agent.conf" = "~/.gnupg/gpg-agent.conf"
 
@@ -45,9 +42,6 @@ git.email = "juancruzmencia@gmail.com"
 
 [podman.files]
 "podman/storage.conf" = "~/.config/containers/storage.conf"
-
-[spotify.files]
-"spotify/spotify-launcher.conf" = "~/.config/spotify-launcher.conf"
 
 [ssh.files]
 "ssh/config" = "~/.ssh/config"
