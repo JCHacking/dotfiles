@@ -13,6 +13,9 @@ default_target_type = "automatic"
 [delta.files]
 "delta/config" = "~/.config/delta/config"
 
+[electron.files]
+"electron/electron-flags.conf" = "~/.config/electron-flags.conf"
+
 [git.files]
 "git/commit.template.txt" = "~/.config/git/commit.template.txt"
 "git/config" = "~/.config/git/config"

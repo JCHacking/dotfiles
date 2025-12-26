@@ -3,6 +3,7 @@ packages = [
   "bat",
   "cargo",
   "delta",
+  "electron",
   "git",
   "gpg",
   "imv",

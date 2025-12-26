@@ -10,8 +10,8 @@ I am uploading them in case they can serve as inspiration to someone, but I do n
 - bat
 - cargo
 - delta
+- electron
 - git
-- google-chrome
 - gpg
 - imv
 - lazygit
@@ -19,7 +19,6 @@ I am uploading them in case they can serve as inspiration to someone, but I do n
 - mako
 - neovim
 - podman
-- spotify
 - ssh
 - starship
 - sway
