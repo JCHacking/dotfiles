@@ -1,3 +1,5 @@
+export WAYSCRIBER_NO_TRAY=1
+
 {{#if hardware.isGraphicNvidia}}
 export LIBVA_DRIVER_NAME=nvidia
 export GBM_BACKEND=nvidia-drm
