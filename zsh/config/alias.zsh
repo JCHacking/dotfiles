@@ -17,4 +17,4 @@ alias docker="podman"
 alias docker-compose="podman-compose"
 
 # Add useful ssh aliases
-alias ssh-nosec="ssh -o 'StricthostKeyChecking=no' -o 'UserKnownHostsFile=/dev/null' -o 'LogLevel=ERROR'"
+alias ssh-nosec="ssh -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile=/dev/null' -o 'LogLevel=ERROR'"
