@@ -29,6 +29,7 @@ output * bg /usr/share/backgrounds/archlinux/simple.png fill
 
 # Themes
 exec {
+    gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
     gsettings set org.gnome.desktop.interface gtk-theme "Qogir-Round-Dark"
     gsettings set org.gnome.desktop.interface icon-theme "Qogir-Dark"
     gsettings set org.gnome.desktop.interface cursor-theme "Qogir-cursors"
