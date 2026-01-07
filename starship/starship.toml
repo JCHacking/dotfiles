@@ -24,6 +24,7 @@ $character\
 """
 add_newline = true
 palette = "jchacking"
+scan_timeout=60
 
 [palettes.jchacking]
 color-accent = "#1976d2"
