@@ -31,4 +31,4 @@ packages = [
 hardware.isGraphicNvidia = false
 git.username = "jmencianaranjo-ionos"
 git.email = "jcmencia@arsys.es"
-ssh.username = "jmencianaranjo-ionos"
+ssh.username = "jcmencia"
