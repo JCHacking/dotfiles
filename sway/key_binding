@@ -54,10 +54,10 @@ bindsym $mod+a focus child
 
 bindsym $mod+b splith
 bindsym $mod+v splitv
-bindsym $mod+s toggle split
 
-bindsym $mod+w stacking
-bindsym $mod+e tabbed
+bindsym $mod+w layout stacking
+bindsym $mod+e layout tabbed
+bindsym $mod+s layout toggle split
 
 bindsym $mod+f fullscreen
 
