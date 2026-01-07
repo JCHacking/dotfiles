@@ -1,6 +1,7 @@
 fallback = ""
 
 [matching]
+jetbrains-pycharm = ""
 KeePassXC = ""
 "spotify" = ""
 "/Transmission/" = ""
