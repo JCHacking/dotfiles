@@ -12,6 +12,9 @@ alias grep="rg --no-ignore --hidden --pcre2"
 alias ls="lsd --long --git"
 alias tree="ls --tree"
 
+# Alias for task (Because go-task rename binary name)
+alias task="go-task"
+
 # Replace docker to podman
 alias docker="podman"
 alias docker-compose="podman-compose"
