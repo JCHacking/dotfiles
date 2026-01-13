@@ -8,9 +8,7 @@
         "sway/mode"
     ],
     "modules-center": [
-        "clock#dayofweek",
-        "clock#time",
-        "clock#date"
+        "clock"
     ],
     "modules-right": [
         "cpu",
@@ -38,14 +36,30 @@
         "tooltip": false
     },
 
-    "clock#dayofweek": {
-        "format": "{:%a}"
-    },
-    "clock#time": {
-	    "format": "{:%H:%M}"
-    },
-    "clock#date": {
-	    "format": "{:%d-%m-%y}"
+    "clock": {
+	    "format": "{:%a %d-%m-%y %H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "format": {
+                "months": "<span color='#1976d2'><b>{}</b></span>",
+                "weekdays": "<span color='#1976d2'><b>{}</b></span>",
+                "days": "<span color='#fafafa'><b>{}</b></span>",
+                "today": "<span color='#1976d2'><b>{}</b></span>",
+                "weeks": "<span color='#1976d2'><b>W{:%W}</b></span>"
+            },
+            "weeks-pos": "right",
+            "on-scroll": 1,
+        },
+
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down",
+            "on-click-middle": "shift_reset"
+        }
     },
 
     "cpu": {
@@ -109,7 +123,9 @@
 
     "sway/language": {
 	    "format": "  {short}",
-	    "tooltip": false
+        "tooltip-format": "{short}",
+
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
     },
 
     "pulseaudio": {
@@ -121,7 +137,7 @@
             "default": [ " ", " ", " " ]
         },
 
-        "tooltip": false,
+        "tooltip-format": "{volume:2}%",
 
         "on-click": "pavucontrol",
         "on-click-right": "pamixer -t"
