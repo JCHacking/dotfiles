@@ -1,6 +1,9 @@
 default-timeout=5000
 output=DP-2
 
+width=300
+height=300
+
 background-color=#292b2e
 border-color=#1976d2
 border-size=1
