@@ -15,9 +15,5 @@ alias tree="ls --tree"
 # Alias for task (Because go-task rename binary name)
 alias task="go-task"
 
-# Replace docker to podman
-alias docker="podman"
-alias docker-compose="podman-compose"
-
 # Add useful ssh aliases
 alias ssh-nosec="ssh -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile=/dev/null' -o 'LogLevel=ERROR'"
