@@ -1,6 +1,10 @@
 fallback = ""
 
 [matching]
+calibre-gui = ""
+chromium-browser = ""
+DevToys = ""
+jetbrains-datagrip = ""
 jetbrains-pycharm = ""
 KeePassXC = ""
 "spotify" = ""
