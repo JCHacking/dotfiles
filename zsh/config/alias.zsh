@@ -17,3 +17,4 @@ alias task="go-task"
 
 # Add useful ssh aliases
 alias ssh-nosec="ssh -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile=/dev/null' -o 'LogLevel=ERROR'"
+alias sftp-nosec="sftp -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile=/dev/null' -o 'LogLevel=ERROR'"
