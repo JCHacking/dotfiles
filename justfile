@@ -1,4 +1,4 @@
-_default: apply
+_default: update
 
 [doc('Apply Dotfiles')]
 apply:
