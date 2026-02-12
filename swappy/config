@@ -1,0 +1,3 @@
+[Default]
+save_dir=~/Screenshots
+save_filename=%Y-%m-%dT%H:%M:%S.png

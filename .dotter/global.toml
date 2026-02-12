@@ -54,6 +54,9 @@ ssh.username = "jchacking"
 [starship.files]
 "starship/starship.toml" = "~/.config/starship.toml"
 
+[swappy.files]
+"swappy/config" = "~/.config/swappy/config"
+
 [sway.files]
 "sway/application" = "~/.config/sway/application"
 "sway/config" = "~/.config/sway/config"
@@ -74,9 +77,6 @@ ssh.username = "jchacking"
 [waybar.files]
 "waybar/config.jsonc" = "~/.config/waybar/config.jsonc"
 "waybar/style.css" = "~/.config/waybar/style.css"
-
-[wayscriber.files]
-"wayscriber/config.toml" = "~/.config/wayscriber/config.toml"
 
 [wofi.files]
 "wofi/config" = "~/.config/wofi/config"
