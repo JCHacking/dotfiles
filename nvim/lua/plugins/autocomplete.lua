@@ -71,7 +71,6 @@ return {
                     ["<C-f>"] = cmp.mapping.scroll_docs(5),
 
                     ["<C-e>"] = cmp.mapping.abort(),
-                    ["<CR>"] = cmp.mapping.confirm({ select = true }),
                     ["<C-y>"] = cmp.mapping.confirm({ select = true }),
                     ["<C-Space>"] = cmp.mapping.complete(),
                 },
