@@ -29,4 +29,5 @@ packages = [
 "sway/monitor.jchacking-pc" = "~/.config/sway/monitor"
 
 [variables]
+hardware.hasBattery = false
 hardware.isGraphicNvidia = true

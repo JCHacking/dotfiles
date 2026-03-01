@@ -7,6 +7,9 @@ default_target_type = "automatic"
 [bat.files]
 "bat/config" = "~/.config/bat/config"
 
+[batsignal.files]
+"batsignal/batsignal" = "~/.config/batsignal"
+
 [cargo.files]
 "cargo/config.toml" = "~/.cargo/config.toml"
 

@@ -1,6 +1,7 @@
 packages = [
   "alacritty", 
   "bat",
+  "batsignal",
   "delta",
   "electron",
   "git",
@@ -28,6 +29,7 @@ packages = [
 "sway/monitor.llw-185701" = "~/.config/sway/monitor"
 
 [variables]
+hardware.hasBattery = true
 hardware.isGraphicNvidia = false
 git.username = "jmencianaranjo-ionos"
 git.email = "jcmencia@arsys.es"
