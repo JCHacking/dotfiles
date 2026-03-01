@@ -5,7 +5,7 @@ exec sworkstyle
 exec swayidle -w timeout 300 'swaylock'
 {{#if hardware.hasBattery}}
 exec batsignal
-{{/if}
+{{/if}}
 
 # Clipboard
 exec cliphist wipe
