@@ -1,10 +1,10 @@
 return {
     {
-        "junegunn/fzf",
+        "junegunn/fzf.vim",
         event = "VeryLazy",
 
         dependencies = {
-            "junegunn/fzf.vim"
+            "junegunn/fzf"
         },
 
         keys = {

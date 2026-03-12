@@ -24,7 +24,7 @@ vim.keymap.set("n", "<leader>s=", "<C-w>=", { desc = "Resize windows to make equ
 vim.keymap.set("n", "<leader>sq", "<cmd>close<CR>", { desc = "Close current split"})
 
 -- Scroll
-vim.keymap.set("n", "<leader>cl", function() vim.opt.scrolloff = 999 - vim.opt.scrolloff end, { desc = "Lock/Unlock cursor line stay in the middle" })
+vim.keymap.set("n", "<leader>cl", function() vim.opt.scrolloff = 999 - vim.o.scrolloff end, { desc = "Lock/Unlock cursor line stay in the middle" })
 
 -- Search
 vim.keymap.set("n", "<leader>nh", "<cmd>nohl<CR>", { desc = "Clear search highlights" })

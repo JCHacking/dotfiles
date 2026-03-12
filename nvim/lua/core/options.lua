@@ -7,9 +7,6 @@ vim.opt.backupdir = vim.fn.stdpath("cache") .. "/backup"  -- Backup directory
 -- Clipboard
 vim.opt.clipboard = "unnamedplus"  -- Use system clipboard
 
--- Encoding
-vim.opt.encoding = "utf-8"  -- Use encoding UTF-8
-
 -- Hightlight
 vim.opt.cursorline = true       -- Hightligh line of cursor
 
@@ -28,10 +25,9 @@ vim.opt.mouse = "a"
 
 -- Numbers
 vim.opt.number = true  -- Show numbers of lines
-vim.opt.ruler = true   -- Show line and column number of currect cursor position
+vim.opt.pumheight = 10
 
 -- Performance
-vim.opt.lazyredraw = true  -- Don't update screen during macro and script execution
 vim.opt.redrawtime = 1500  -- Milliseconds for redrawing the display
 vim.opt.updatetime = 100   -- Milliseconds without typing anything to write swap to disk
 
