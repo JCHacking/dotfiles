@@ -1,20 +1,11 @@
 return {
     {
-        "junegunn/fzf.vim",
-        event = "VeryLazy",
-
-        dependencies = {
-            "junegunn/fzf"
-        },
+        "ibhagwan/fzf-lua",
+        dependencies = { "junegunn/fzf" },
 
         keys = {
-            { "<leader>ff", "<cmd>Files<CR>", desc = "Search file by name" },
-            { "<leader>fc", "<cmd>Rg<CR>", desc = "Search file by name" },
+            { "<leader>ff", function() require("fzf-lua").files() end, desc = "Search file by name" },
+            { "<leader>fc", function() require("fzf-lua").live_grep() end, desc = "Search file by content" },
         },
-    },
-
-    {
-        "ibhagwan/fzf-lua",
-        lazy = true,
     },
 }

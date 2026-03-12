@@ -20,7 +20,7 @@ return {
         },
 
         extensions = {
-            "fzf",
+            "fzf-lua",
             "lazy",
             "neo-tree",
         },

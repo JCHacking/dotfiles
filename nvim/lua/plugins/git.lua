@@ -28,7 +28,7 @@ return {
                 map("n", "<leader>gS", gitsigns.stage_buffer, "Stage Buffer")
 
                 --- Undo Stage
-                map("n", "<leader>gu", gitsigns.undo_stage_hunk, "Stage Hunk")
+                map("n", "<leader>gu", gitsigns.undo_stage_hunk, "Undo Stage Hunk")
 
                 --- Reset
                 map("n", "<leader>gr", gitsigns.reset_hunk, "Reset Hunk")
@@ -53,7 +53,7 @@ return {
                 end, "Diff this")
 
                 -- Text Object
-                map({ "o", "x" }, "ih", ":<C-U>Gisigns select_hunk<CR>", "Gitsigns select hunk")
+                map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "Gitsigns select hunk")
 
             end,
         },

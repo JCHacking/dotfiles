@@ -1,2 +1,15 @@
+# Direnv
+.direnv/
 .envrc
+
+# Editor
 .nvim.lua
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets
+.env
