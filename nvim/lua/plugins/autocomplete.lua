@@ -17,7 +17,7 @@ return {
         },
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "pyright" },
+                ensure_installed = { "pyright", "lua_ls" },
                 automatic_installation = true,
             })
         end,
@@ -44,7 +44,20 @@ return {
                 },
             })
 
-            vim.lsp.enable("pyright")
+            vim.lsp.config("lua_ls", {
+                settings = {
+                    Lua = {
+                        runtime = { version = "LuaJIT" },
+                        workspace = {
+                            checkThirdParty = false,
+                            library = vim.api.nvim_get_runtime_file("", true),
+                        },
+                        diagnostics = { globals = { "vim" } },
+                    },
+                },
+            })
+
+            vim.lsp.enable({ "pyright", "lua_ls" })
 
             vim.api.nvim_create_autocmd("LspAttach", {
                 group = vim.api.nvim_create_augroup("UserLspAttach", { clear = true }),

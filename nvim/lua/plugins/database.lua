@@ -28,7 +28,5 @@ return {
                 desc = "Open/Close DB UI",
             }
         },
-
-        config = function() end,
     }
 }

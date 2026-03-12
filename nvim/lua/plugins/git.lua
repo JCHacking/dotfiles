@@ -62,9 +62,7 @@ return {
     -- GIT UI Menu
     {
         "kdheepak/lazygit.nvim",
-        lazy = true,
-
-        depenendencies = {
+        dependencies = {
             "nvim-lua/plenary.nvim",
         },
 

@@ -3,13 +3,31 @@ return {
     {
         "EdenEast/nightfox.nvim",
         lazy = false,
-
-        dependencies = {
-            "nvim-treesitter/nvim-treesitter",
-        },
-
         init = function()
-            vim.cmd(":colorschem nightfox")
+            vim.cmd(":colorscheme nightfox")
+        end,
+    },
+
+    -- Syntax Highlighting
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        event = { "BufReadPre", "BufNewFile" },
+        config = function()
+            require("nvim-treesitter").setup({
+                ensure_installed = {
+                    "python",
+                    "lua",
+                    "bash",
+                    "json",
+                    "yaml",
+                    "toml",
+                    "markdown",
+                },
+                auto_install = true,
+                highlight = { enable = true },
+                indent = { enable = true },
+            })
         end,
     },
 
@@ -22,7 +40,7 @@ return {
         config = function(_, opts)
             require("colorizer").setup(opts)
 
-            -- execute colorizer as soon as possiblevim
+            -- execute colorizer as soon as possible
             vim.defer_fn(function()
                 require("colorizer").attach_to_buffer(0)
             end, 0)
