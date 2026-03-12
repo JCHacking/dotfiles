@@ -9,7 +9,7 @@ return {
 
     keys = {
         {
-            "<leader>t",
+            "<leader>tt",
             "<cmd>ToggleTerm<CR>",
             mode = {"n", "t"},
             desc = "Open/Close Terminal",

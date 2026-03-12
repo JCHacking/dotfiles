@@ -1,5 +1,8 @@
 vim.g.mapleader = " "  -- Set SPACE for leader key
 
+-- Insert Mode
+vim.keymap.set("i", "jk", "<Esc>", { desc = "Exit insert mode" })
+
 -- Buffers
 vim.keymap.set("n", "<leader>n", "<cmd>bnext<CR>", { desc = "Go to the next buffer" })
 vim.keymap.set("n", "<leader>p", "<cmd>bprev<CR>", { desc = "Go to the previous buffer" })

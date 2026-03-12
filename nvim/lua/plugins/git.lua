@@ -69,7 +69,7 @@ return {
         },
 
         keys = {
-            { "<leader>g", "<cmd>LazyGit<CR>", desc = "Open/Close GIT UI" },
+            { "<leader>gg", "<cmd>LazyGit<CR>", desc = "Open/Close GIT UI" },
         },
     },
 }

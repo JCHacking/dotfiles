@@ -1,7 +1,68 @@
 return {
     {
+        "williamboman/mason.nvim",
+        build = ":MasonUpdate",
+        config = function()
+            require("mason").setup({
+                ui = { border = "rounded" },
+            })
+        end,
+    },
+
+    {
+        "williamboman/mason-lspconfig.nvim",
+        dependencies = {
+            "williamboman/mason.nvim",
+            "neovim/nvim-lspconfig",
+        },
+        config = function()
+            require("mason-lspconfig").setup({
+                ensure_installed = { "pyright" },
+                automatic_installation = true,
+            })
+        end,
+    },
+
+    {
         "neovim/nvim-lspconfig",
         event = { "BufReadPre", "BufNewFile" },
+        dependencies = { "hrsh7th/cmp-nvim-lsp" },
+        config = function()
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+            vim.lsp.config("*", { capabilities = capabilities })
+
+            vim.lsp.config("pyright", {
+                settings = {
+                    python = {
+                        analysis = {
+                            typeCheckingMode = "basic",
+                            autoSearchPaths = true,
+                            useLibraryCodeForTypes = true,
+                        },
+                    },
+                },
+            })
+
+            vim.lsp.enable("pyright")
+
+            vim.api.nvim_create_autocmd("LspAttach", {
+                group = vim.api.nvim_create_augroup("UserLspAttach", { clear = true }),
+                callback = function(ev)
+                    local opts = { buffer = ev.buf }
+                    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+                    vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+                    vim.keymap.set("n", "gr", function() require("fzf-lua").lsp_references() end, opts)
+                    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+                    vim.keymap.set("n", "K",  vim.lsp.buf.hover, opts)
+                    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+                    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+                    vim.keymap.set("n", "<leader>d",  vim.diagnostic.open_float, opts)
+                    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+                    vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+                end,
+            })
+        end,
     },
 
     {
@@ -19,10 +80,9 @@ return {
 
             "petertriho/cmp-git",
 
-            "hrsh7th/cmp-buffer", 
+            "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-cmdline",
-
         },
 
         config = function()
@@ -44,26 +104,26 @@ return {
                     ["<C-p>"] = cmp.mapping(
                         function(fallback)
                             if cmp.visible() then
-                                cmp.select_prev_item() 
+                                cmp.select_prev_item()
                             elseif luasnip.jumpable(-1) then
-                                luasnip.jump(-1) 
+                                luasnip.jump(-1)
                             else
                                 fallback()
                             end
-                        end, 
+                        end,
                         { "i", "s" }
                     ),
 
                     ["<C-n>"] = cmp.mapping(
                         function(fallback)
                             if cmp.visible() then
-                                cmp.select_next_item() 
+                                cmp.select_next_item()
                             elseif luasnip.expand_or_jumpable() then
-                                luasnip.expand_or_jump() 
+                                luasnip.expand_or_jump()
                             else
-                                fallback() 
+                                fallback()
                             end
-                        end, 
+                        end,
                         { "i", "s" }
                     ),
 
@@ -78,7 +138,7 @@ return {
                 snippet = {
                     expand = function(args)
                         luasnip.lsp_expand(args.body)
-                    end
+                    end,
                 },
 
                 sources = {
@@ -90,8 +150,9 @@ return {
 
                 completion = {
                     completeopt = "menu,menuone,preview,noselect",
+                    autocomplete = false,
                 },
-                
+
                 window = {
                     completion = {
                         border = "rounded",
@@ -112,34 +173,23 @@ return {
 
             cmp.setup.filetype("gitcommit", {
                 sources = cmp.config.sources(
-                    {
-                        { name = "git"},
-                    },
-                    {
-                        { name = "buffer" },
-                    }
+                    { { name = "git" } },
+                    { { name = "buffer" } }
                 ),
             })
             require("cmp_git").setup()
 
-            cmp.setup.cmdline({"/", "?"}, {
+            cmp.setup.cmdline({ "/", "?" }, {
                 mapping = cmp.mapping.preset.cmdline(),
-                sources = {
-                    { name = "buffer" },
-                },
+                sources = { { name = "buffer" } },
             })
             cmp.setup.cmdline(":", {
                 mapping = cmp.mapping.preset.cmdline(),
                 sources = cmp.config.sources(
-                    {
-                        { name = "cmdline"},
-                    },
-                    {
-                        { name = "buffer" },
-                    }
-                )
+                    { { name = "cmdline" } },
+                    { { name = "buffer" } }
+                ),
             })
         end,
     },
 }
-

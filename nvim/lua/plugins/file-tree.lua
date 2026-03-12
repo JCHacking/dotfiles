@@ -12,7 +12,7 @@ return {
     },
 
     keys = {
-        { "<leader>f", "<cmd>Neotree toggle<CR>", desc = "Open/Close file explorer" }
+        { "<leader>e", "<cmd>Neotree toggle<CR>", desc = "Open/Close file explorer" }
     },
 
     opts = {
