@@ -6,7 +6,11 @@ fi
 # Configure Completion
 fpath=(~/.cache/zsh/completions $fpath)
 autoload -Uz compinit
-compinit
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+    compinit
+else
+    compinit -C
+fi
 
 # Cache
 zstyle ":completion:*" use-cache on                       # Enable Cache

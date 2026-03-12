@@ -6,7 +6,6 @@ HISTSIZE=4096 # Limit in file
 SAVEHIST=4096 # Limit in memory
 
 # Store
-setopt APPEND_HISTORY     # Add to old history, do not overwrite
 setopt INC_APPEND_HISTORY # Write to the history file immediately, not when the shell exits.
 setopt SHARE_HISTORY      # Share history between all sessions.
 
