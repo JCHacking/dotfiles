@@ -47,6 +47,7 @@ Machine-specific configurations live in `.dotter/`.
 | fzf | Fuzzy finder |
 | gitsigns | Git decorations |
 | lazygit | Git UI |
+| diffview | Diff viewer & file history |
 | toggleterm | Floating terminal |
 | vim-dadbod | Database client |
 | lualine | Status bar |
@@ -109,6 +110,10 @@ Machine-specific configurations live in `.dotter/`.
 | `<leader>gp` | Preview hunk |
 | `<leader>gb` | Blame line |
 | `<leader>gd` | Diff this |
+| `<leader>gv` | Diff view (all changes) |
+| `<leader>gh` | File history (current file) |
+| `<leader>gH` | Repo history |
+| `<leader>gx` | Close diff view |
 
 **LSP** (active when a language server is attached)
 

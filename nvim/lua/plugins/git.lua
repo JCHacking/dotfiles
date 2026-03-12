@@ -59,6 +59,18 @@ return {
         },
     },
 
+    -- Diff viewer
+    {
+        "sindrets/diffview.nvim",
+        cmd = { "DiffviewOpen", "DiffviewFileHistory" },
+        keys = {
+            { "<leader>gv", "<cmd>DiffviewOpen<CR>", desc = "Diff View" },
+            { "<leader>gh", "<cmd>DiffviewFileHistory %<CR>", desc = "File History" },
+            { "<leader>gH", "<cmd>DiffviewFileHistory<CR>", desc = "Repo History" },
+            { "<leader>gx", "<cmd>DiffviewClose<CR>", desc = "Close Diff View" },
+        },
+    },
+
     -- GIT UI Menu
     {
         "kdheepak/lazygit.nvim",
