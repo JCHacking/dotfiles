@@ -9,7 +9,7 @@ gaps outer 5px
 
 
 # Colors
-set $color-background $292b2e
+set $color-background #292b2e
 set $color-blue #1976d2
 set $color-blue-dark #0d47a1
 set $color-grey-light #fafafa

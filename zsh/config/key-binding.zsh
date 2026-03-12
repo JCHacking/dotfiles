@@ -8,7 +8,7 @@ autoload -Uz up-line-or-beginning-search
 zle -N up-line-or-beginning-search
 
 bindkey -M viins "^[[A" up-line-or-beginning-search # Arrow Up (Vim Insert)
-bindkey -M viins "^[[A" up-line-or-beginning-search # Arrow Up (Vim Command)
+bindkey -M vicmd "^[[A" up-line-or-beginning-search # Arrow Up (Vim Command)
 bindkey -M vicmd "k" up-line-or-beginning-search    # k (Vim Command)
 
 ## Down
@@ -16,7 +16,7 @@ autoload -Uz down-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
 bindkey -M viins "^[[B" down-line-or-beginning-search # Arrow Down (Vim Insert)
-bindkey -M viins "^[[B" down-line-or-beginning-search # Arrow Down (Vim Command)
+bindkey -M vicmd "^[[B" down-line-or-beginning-search # Arrow Down (Vim Command)
 bindkey -M vicmd "j" down-line-or-beginning-search    # j (Vim Command)
 
 # Edit command in editor
