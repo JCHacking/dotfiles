@@ -54,6 +54,8 @@ Machine-specific configurations live in `.dotter/`.
 | alpha-nvim | Start screen |
 | which-key | Keymap guide |
 | nightfox | Color theme |
+| copilot.lua + copilot-cmp | AI autocomplete (GitHub Copilot) |
+| neotest + neotest-python | Test runner (pytest) |
 
 ### Keymaps
 
@@ -138,6 +140,15 @@ Machine-specific configurations live in `.dotter/`.
 | `<C-y>` | Confirm selection |
 | `<C-e>` | Abort completion |
 | `<C-Space>` | Trigger completion |
+
+**Tests**
+
+| Key | Action |
+|---|---|
+| `<leader>tr` | Run nearest test |
+| `<leader>tf` | Run test file |
+| `<leader>ts` | Toggle test summary |
+| `<leader>to` | Toggle test output |
 
 **Other**
 
