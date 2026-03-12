@@ -25,7 +25,7 @@ vim.opt.mouse = "a"
 
 -- Numbers
 vim.opt.number = true  -- Show numbers of lines
-vim.opt.pumheight = 10
+vim.opt.pumheight = 10  -- Max items visible in completion popup menu
 
 -- Performance
 vim.opt.redrawtime = 1500  -- Milliseconds for redrawing the display
