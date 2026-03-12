@@ -56,7 +56,7 @@ window#waybar {
 #memory.critical,
 #disk.critical,
 #pulseaudio.muted,
-#battery.critial {
+#battery.critical {
     background: @urgent
 }
 
