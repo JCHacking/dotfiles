@@ -1,5 +1,7 @@
 export VISUAL=nvim
 export EDITOR=nvim
 
-path+=('$HOME/.cargo/bin')
+typeset -U path
+path+=("$HOME/.cargo/bin")
+path+=("$HOME/.local/bin")
 export PATH
