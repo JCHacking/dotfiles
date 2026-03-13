@@ -10,6 +10,7 @@ return {
     "stevearc/dressing.nvim",
   },
 
+  cmd = { "Neotree" },
   keys = {
     { "<leader>e", "<cmd>Neotree toggle<CR>", desc = "Open/Close file explorer" },
   },
