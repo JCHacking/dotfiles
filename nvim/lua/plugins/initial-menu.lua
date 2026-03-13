@@ -1,42 +1,42 @@
 return {
-    "goolord/alpha-nvim",
-    event = "VimEnter",
+  "goolord/alpha-nvim",
+  event = "VimEnter",
 
-    dependencies = {
-        "nvim-tree/nvim-web-devicons",
-        "nvim-lua/plenary.nvim",
-    },
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+    "nvim-lua/plenary.nvim",
+  },
 
-    config = function()
-        local alpha = require("alpha")
-        local dashboard = require("alpha.themes.dashboard")
+  config = function()
+    local alpha = require("alpha")
+    local dashboard = require("alpha.themes.dashboard")
 
-        -- Set header
-        dashboard.section.header.val = {
-            "                                                     ",
-            "  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
-            "  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
-            "  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
-            "  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
-            "  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
-            "  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
-            "                                                     ",
-        }
+    -- Set header
+    dashboard.section.header.val = {
+      "                                                     ",
+      "  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
+      "  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
+      "  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
+      "  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
+      "  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
+      "  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
+      "                                                     ",
+    }
 
-        -- Set menu
-        dashboard.section.buttons.val = {
-            dashboard.button("e", "  > New File", "<cmd>ene<CR>"),
-            dashboard.button("SPC e", "  > Show File Explorer", "<cmd>Neotree toggle<CR>"),
-            dashboard.button("SPC ff", "󰱼  > Find File", "<cmd>FzfLua files<CR>"),
-            dashboard.button("SPC fc", "  > Find Word", "<cmd>FzfLua live_grep<CR>"),
-            dashboard.button("p", "  > Show Plugin Manager", "<cmd>Lazy<CR>"),
-            dashboard.button("q", "  > Exit", "<cmd>qa<CR>"),
-        }
+    -- Set menu
+    dashboard.section.buttons.val = {
+      dashboard.button("e", "  > New File", "<cmd>ene<CR>"),
+      dashboard.button("SPC e", "  > Show File Explorer", "<cmd>Neotree toggle<CR>"),
+      dashboard.button("SPC ff", "󰱼  > Find File", "<cmd>FzfLua files<CR>"),
+      dashboard.button("SPC fc", "  > Find Word", "<cmd>FzfLua live_grep<CR>"),
+      dashboard.button("p", "  > Show Plugin Manager", "<cmd>Lazy<CR>"),
+      dashboard.button("q", "  > Exit", "<cmd>qa<CR>"),
+    }
 
-        -- Send config to alpha
-        alpha.setup(dashboard.opts)
+    -- Send config to alpha
+    alpha.setup(dashboard.opts)
 
-        -- Disable folding on alpha buffer
-        vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
-    end,
+    -- Disable folding on alpha buffer
+    vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
+  end,
 }

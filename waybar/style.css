@@ -47,7 +47,7 @@ window#waybar {
 }
 
 #workspaces button.visible {
-    background: @box-selected-background
+    background: @box-selected-background;
 }
 
 #workspaces button.urgent,

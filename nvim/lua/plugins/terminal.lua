@@ -1,17 +1,17 @@
 return {
-    "akinsho/toggleterm.nvim",
-    version = "*",
+  "akinsho/toggleterm.nvim",
+  version = "*",
 
-    opts = {
-        direction = "float",
-    },
+  opts = {
+    direction = "float",
+  },
 
-    keys = {
-        {
-            "<leader>tt",
-            "<cmd>ToggleTerm<CR>",
-            mode = {"n", "t"},
-            desc = "Open/Close Terminal",
-        },
+  keys = {
+    {
+      "<leader>tt",
+      "<cmd>ToggleTerm<CR>",
+      mode = { "n", "t" },
+      desc = "Open/Close Terminal",
     },
+  },
 }
