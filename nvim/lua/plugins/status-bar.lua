@@ -20,9 +20,11 @@ return {
     },
 
     extensions = {
-      "fzf-lua",
+      "fzf",
       "lazy",
       "neo-tree",
+      "quickfix",
+      "toggleterm",
     },
   },
 }
