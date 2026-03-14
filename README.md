@@ -139,7 +139,10 @@ Machine-specific configurations live in `.dotter/`.
 | `<C-p>` | Previous item / jump back |
 | `<C-y>` | Confirm selection |
 | `<C-e>` | Abort completion |
-| `<C-Space>` | Trigger completion |
+| `<C-Space>` | Trigger completion manually |
+| `<Tab>` | Accept Copilot suggestion |
+| `<C-]>` | Dismiss Copilot suggestion |
+| `<M-]>` / `<M-[>` | Next/prev Copilot suggestion |
 
 **Tests**
 

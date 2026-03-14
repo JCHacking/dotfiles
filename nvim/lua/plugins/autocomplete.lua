@@ -162,7 +162,7 @@ return {
 
         completion = {
           completeopt = "menu,menuone,preview,noselect",
-          autocomplete = false,
+          autocomplete = { require("cmp.types").cmp.TriggerEvent.TextChanged },
         },
 
         window = {
