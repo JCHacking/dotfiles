@@ -17,7 +17,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "pyright", "lua_ls" },
+        ensure_installed = { "lua_ls", "pyright", "rust_analyzer" },
         automatic_installation = true,
       })
     end,
@@ -57,7 +57,7 @@ return {
         },
       })
 
-      vim.lsp.enable({ "pyright", "lua_ls" })
+      vim.lsp.enable({ "lua_ls", "pyright", "rust_analyzer" })
 
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("UserLspAttach", { clear = true }),
