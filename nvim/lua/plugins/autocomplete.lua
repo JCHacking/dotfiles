@@ -17,7 +17,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "pyright", "rust_analyzer" },
+        ensure_installed = { "lua_ls", "basedpyright", "ruff", "rust_analyzer" },
         automatic_installation = true,
       })
     end,
@@ -32,11 +32,13 @@ return {
 
       vim.lsp.config("*", { capabilities = capabilities })
 
-      vim.lsp.config("pyright", {
+      vim.lsp.config("basedpyright", {
         settings = {
-          python = {
+          basedpyright = {
             analysis = {
               typeCheckingMode = "basic",
+              reportAny = "none",
+              autoImportCompletions = true,
               autoSearchPaths = true,
               useLibraryCodeForTypes = true,
             },
@@ -57,11 +59,17 @@ return {
         },
       })
 
-      vim.lsp.enable({ "lua_ls", "pyright", "rust_analyzer" })
+      vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "rust_analyzer" })
 
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("UserLspAttach", { clear = true }),
         callback = function(ev)
+          local client = vim.lsp.get_client_by_id(ev.data.client_id)
+          if client and client.name == "ruff" then
+            client.server_capabilities.hoverProvider = false
+            return
+          end
+
           local opts = { buffer = ev.buf }
           vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
           vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
@@ -73,8 +81,8 @@ return {
           vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
           vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
           vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
-          vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-          vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+          vim.keymap.set("n", "[d", function() vim.diagnostic.jump({ count = -1 }) end, opts)
+          vim.keymap.set("n", "]d", function() vim.diagnostic.jump({ count = 1 }) end, opts)
         end,
       })
     end,

@@ -1,4 +1,13 @@
 return {
+  -- Auto Save
+  {
+    "okuuva/auto-save.nvim",
+    event = { "InsertLeave", "TextChanged" },
+    opts = {
+      debounce_delay = 1000,
+    },
+  },
+
   -- Improve Manage Remove Buffers
   {
     "nvim-mini/mini.bufremove",

@@ -1,30 +1,44 @@
 return {
-  "nvim-lualine/lualine.nvim",
-  event = "VeryLazy",
+  {
+    "nvim-lualine/lualine.nvim",
+    event = "VeryLazy",
 
-  dependencies = {
-    "nvim-tree/nvim-web-devicons",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+
+    opts = {
+      extensions = {
+        "fzf",
+        "lazy",
+        "neo-tree",
+        "quickfix",
+        "toggleterm",
+      },
+    },
   },
 
-  opts = {
-    tabline = {
-      lualine_a = {
-        {
-          "buffers",
-          symbols = {
-            alternate_file = "",
+  {
+    "akinsho/bufferline.nvim",
+    event = "VeryLazy",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {
+      options = {
+        diagnostics = "nvim_lsp",
+        offsets = {
+          {
+            filetype = "neo-tree",
+            text = "Explorer",
+            highlight = "Directory",
           },
         },
       },
-      lualine_z = { "tabs" },
     },
-
-    extensions = {
-      "fzf",
-      "lazy",
-      "neo-tree",
-      "quickfix",
-      "toggleterm",
-    },
+    config = function(_, opts)
+      require("bufferline").setup(opts)
+      if vim.bo.filetype == "alpha" then
+        vim.opt.showtabline = 0
+      end
+    end,
   },
 }

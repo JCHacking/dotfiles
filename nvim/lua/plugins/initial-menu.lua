@@ -38,5 +38,18 @@ return {
 
     -- Disable folding on alpha buffer
     vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
+
+    vim.api.nvim_create_autocmd("User", {
+      pattern = "AlphaReady",
+      callback = function()
+        vim.opt.showtabline = 0
+      end,
+    })
+    vim.api.nvim_create_autocmd("User", {
+      pattern = "AlphaClosed",
+      callback = function()
+        vim.opt.showtabline = 2
+      end,
+    })
   end,
 }

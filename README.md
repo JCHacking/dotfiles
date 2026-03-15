@@ -56,6 +56,7 @@ Machine-specific configurations live in `.dotter/`.
 | monokai.nvim | Color theme |
 | copilot.lua + copilot-cmp | AI autocomplete (GitHub Copilot) |
 | neotest + neotest-python | Test runner (pytest) |
+| auto-save.nvim | Auto save on idle |
 
 ### Keymaps
 
@@ -139,6 +140,7 @@ Machine-specific configurations live in `.dotter/`.
 | `<C-p>` | Previous item / jump back |
 | `<C-y>` | Confirm selection |
 | `<C-e>` | Abort completion |
+| `<C-b>` / `<C-f>` | Scroll documentation |
 | `<C-Space>` | Trigger completion manually |
 | `<Tab>` | Accept Copilot suggestion |
 | `<C-]>` | Dismiss Copilot suggestion |
