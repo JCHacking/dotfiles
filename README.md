@@ -53,7 +53,7 @@ Machine-specific configurations live in `.dotter/`.
 | lualine | Status bar |
 | alpha-nvim | Start screen |
 | which-key | Keymap guide |
-| nightfox | Color theme |
+| monokai.nvim | Color theme |
 | copilot.lua + copilot-cmp | AI autocomplete (GitHub Copilot) |
 | neotest + neotest-python | Test runner (pytest) |
 
