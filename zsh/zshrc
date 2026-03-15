@@ -14,4 +14,5 @@ source ~/.config/zsh/key-binding.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 eval "$(direnv hook zsh)"
+eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
