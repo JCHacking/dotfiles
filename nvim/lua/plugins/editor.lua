@@ -1,5 +1,15 @@
 return {
-  -- Auto Save
+  -- Highlight and search TODO, FIXME, NOTE comments
+  {
+    "folke/todo-comments.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+    keys = {
+      { "<leader>ft", "<cmd>TodoFzfLua<CR>", desc = "Search TODOs" },
+    },
+  },
+
   {
     "okuuva/auto-save.nvim",
     event = { "InsertLeave", "TextChanged" },
@@ -8,7 +18,6 @@ return {
     },
   },
 
-  -- Improve Manage Remove Buffers
   {
     "nvim-mini/mini.bufremove",
     version = false,

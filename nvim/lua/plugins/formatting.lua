@@ -1,17 +1,4 @@
 return {
-  -- Auto Install Formatters
-  {
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
-    event = "VeryLazy",
-    dependencies = { "williamboman/mason.nvim" },
-    opts = {
-      ensure_installed = { "stylua", "ruff", "prettier" },
-      auto_update = false,
-      run_on_start = true,
-    },
-  },
-
-  -- Code Linting
   {
     "mfussenegger/nvim-lint",
     event = { "BufReadPre", "BufNewFile" },
@@ -30,13 +17,12 @@ return {
     end,
   },
 
-  -- Code Formatting
   {
     "stevearc/conform.nvim",
     event = { "BufWritePre" },
     keys = {
       {
-        "<leader>ft",
+        "<leader>fm",
         function()
           require("conform").format({ async = true, lsp_format = "fallback" })
         end,

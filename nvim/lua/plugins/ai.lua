@@ -1,5 +1,4 @@
 return {
-  -- COPILOT
   {
     "zbirenbaum/copilot.lua",
     event = "InsertEnter",
@@ -19,5 +18,4 @@ return {
       })
     end,
   },
-
 }

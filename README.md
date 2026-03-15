@@ -29,7 +29,7 @@ Machine-specific configurations live in `.dotter/`.
 | Editor | neovim |
 | Window Manager | sway, swaylock, waybar, wofi, mako, sworkstyle |
 | Git | git, lazygit, delta |
-| System | podman, cargo, bat, lsd, imv, direnv |
+| System | podman, cargo, bat, lsd, imv, direnv, zoxide |
 | Security | gpg, ssh |
 | Other | electron, xdg, uwsm, batsignal, swappy |
 
@@ -39,24 +39,39 @@ Machine-specific configurations live in `.dotter/`.
 
 | Plugin | Purpose |
 |---|---|
-| mason | LSP server installer |
-| nvim-lspconfig | Language Server Protocol |
+| **LSP** | |
+| mason | Language server & tool installer |
+| nvim-lspconfig | Language server configuration |
+| **Completion** | |
 | nvim-cmp | Autocompletion engine |
 | LuaSnip + friendly-snippets | Snippets |
+| **Formatting** | |
+| conform.nvim | Code formatter |
+| nvim-lint | Code linter |
+| **Navigation** | |
 | neo-tree | File explorer |
-| fzf | Fuzzy finder |
-| gitsigns | Git decorations |
+| fzf-lua | Fuzzy finder |
+| **Git** | |
+| gitsigns | Git decorations & hunk actions |
 | lazygit | Git UI |
 | diffview | Diff viewer & file history |
+| **UI** | |
+| lualine | Status bar |
+| bufferline | Buffer tabs |
+| which-key | Keymap guide |
+| **Theme** | |
+| monokai.nvim | Color theme |
+| nvim-treesitter | Syntax highlighting |
+| **Editor** | |
+| auto-save.nvim | Auto save on idle |
+| todo-comments.nvim | Highlight and search TODO/FIXME/NOTE comments |
+| **AI** | |
+| copilot.lua | AI autocomplete (GitHub Copilot) |
+| **Other** | |
 | toggleterm | Floating terminal |
 | vim-dadbod | Database client |
-| lualine | Status bar |
 | alpha-nvim | Start screen |
-| which-key | Keymap guide |
-| monokai.nvim | Color theme |
-| copilot.lua + copilot-cmp | AI autocomplete (GitHub Copilot) |
 | neotest + neotest-python | Test runner (pytest) |
-| auto-save.nvim | Auto save on idle |
 
 ### Keymaps
 
@@ -98,6 +113,8 @@ Machine-specific configurations live in `.dotter/`.
 | `<leader>e` | Toggle file explorer |
 | `<leader>ff` | Find file |
 | `<leader>fc` | Find content (ripgrep) |
+| `<leader>ft` | Search TODOs |
+| `<leader>fm` | Format buffer |
 
 **Git**
 
