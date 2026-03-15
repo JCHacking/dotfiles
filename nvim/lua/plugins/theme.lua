@@ -1,10 +1,11 @@
 return {
   -- Color scheme
   {
-    "EdenEast/nightfox.nvim",
+    "tanvirtin/monokai.nvim",
     lazy = false,
-    init = function()
-      vim.cmd("colorscheme nightfox")
+    config = function()
+      require("monokai").setup()
+      vim.cmd("colorscheme monokai")
     end,
   },
 
@@ -55,6 +56,7 @@ return {
 
     main = "ibl",
     opts = {
+      indent = { char = "▏" },
       scope = {
         enabled = false,
       },

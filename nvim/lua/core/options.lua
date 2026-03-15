@@ -7,6 +7,17 @@ vim.opt.backupdir = vim.fn.stdpath("cache") .. "/backup" -- Backup directory
 -- Clipboard
 vim.opt.clipboard = "unnamedplus" -- Use system clipboard
 
+-- Colors
+vim.opt.termguicolors = true -- Enable 24-bit RGB colors
+
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function()
+    if pcall(vim.treesitter.start) then
+      vim.bo.syntax = "off"
+    end
+  end,
+})
+
 -- Hightlight
 vim.opt.cursorline = true -- Hightligh line of cursor
 

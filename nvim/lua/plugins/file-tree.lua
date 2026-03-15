@@ -25,6 +25,10 @@ return {
         visible = true,
         never_show = {
           ".git",
+          "__pycache__",
+        },
+        never_show_by_pattern = {
+          ".*cache*",
         },
       },
     },
