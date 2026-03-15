@@ -107,7 +107,7 @@ return {
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
 
-      "zbirenbaum/copilot-cmp",
+
     },
 
     config = function()
@@ -161,7 +161,7 @@ return {
         },
 
         sources = {
-          { name = "copilot" },
+
           { name = "nvim_lsp" },
           { name = "luasnip" },
           { name = "buffer" },
