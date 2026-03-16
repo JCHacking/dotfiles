@@ -78,6 +78,15 @@ return {
         },
       },
     },
+    config = function(_, opts)
+      require("diffview").setup(opts)
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "DiffviewFiles", "DiffviewFileHistory" },
+        callback = function()
+          vim.keymap.set("n", "q", "<cmd>DiffviewClose<CR>", { buffer = true, desc = "Close Diffview" })
+        end,
+      })
+    end,
   },
 
   -- GIT UI (Neogit - native Magit-style client)
@@ -93,6 +102,7 @@ return {
       { "<leader>gc", "<cmd>Neogit commit<CR>", desc = "Neogit Commit" },
     },
     opts = {
+      kind = "tab",
       integrations = {
         diffview = true,
       },

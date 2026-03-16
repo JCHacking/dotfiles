@@ -25,6 +25,14 @@ return {
     opts = {
       options = {
         diagnostics = "nvim_lsp",
+        custom_filter = function(buf_number)
+          local ft = vim.bo[buf_number].filetype
+          local ignored = { "DiffviewFiles", "DiffviewFileHistory", "NeogitStatus", "NeogitLog" }
+          for _, v in ipairs(ignored) do
+            if ft == v then return false end
+          end
+          return true
+        end,
         offsets = {
           {
             filetype = "neo-tree",
