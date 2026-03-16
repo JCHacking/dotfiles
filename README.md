@@ -178,3 +178,14 @@ Machine-specific configurations live in `.dotter/`.
 |---|---|
 | `<leader>tt` | Toggle terminal |
 | `<leader>db` | Toggle DB UI |
+
+## Zsh
+
+Vi mode enabled. `<leader>` equivalente no aplica — los atajos son directos.
+
+| Key | Mode | Action |
+|---|---|---|
+| `jk` | Insert | Exit insert mode |
+| `k` / `j` | Normal | History search up/down |
+| `↑` / `↓` | Insert/Normal | History search up/down |
+| `<C-e>` | Insert/Normal | Edit command in `$EDITOR` |

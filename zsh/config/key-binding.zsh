@@ -23,5 +23,6 @@ bindkey -M vicmd "j" down-line-or-beginning-search    # j (Vim Command)
 autoload -Uz edit-command-line
 zle -N edit-command-line
 
-bindkey -M viins "\\C-e" edit-command-line # Ctrl+E Edit command in Editor (Vim Command)
+bindkey -M viins "\\C-e" edit-command-line # Ctrl+E Edit command in Editor (Vim Insert)
 bindkey -M vicmd "\\C-e" edit-command-line # Ctrl+E Edit command in Editor (Vim Command)
+bindkey -M viins "jk" vi-cmd-mode       # jk Exit insert mode (Vim Insert)
