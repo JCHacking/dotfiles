@@ -33,9 +33,6 @@ git.email = "juancruzmencia@gmail.com"
 [imv.files]
 "imv/config" = "~/.config/imv/config"
 
-[lazygit.files]
-"lazygit/config.yml" = "~/.config/lazygit/config.yml"
-
 [lsd.files]
 "lsd/config.yaml" = "~/.config/lsd/config.yaml"
 

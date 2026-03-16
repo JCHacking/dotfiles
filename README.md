@@ -28,7 +28,7 @@ Machine-specific configurations live in `.dotter/`.
 | Terminal | alacritty |
 | Editor | neovim |
 | Window Manager | sway, swaylock, waybar, wofi, mako, sworkstyle |
-| Git | git, lazygit, delta |
+| Git | git, delta |
 | System | podman, cargo, bat, lsd, imv, direnv, zoxide |
 | Security | gpg, ssh |
 | Other | electron, xdg, uwsm, batsignal, swappy |
@@ -53,8 +53,8 @@ Machine-specific configurations live in `.dotter/`.
 | fzf-lua | Fuzzy finder |
 | **Git** | |
 | gitsigns | Git decorations & hunk actions |
-| lazygit | Git UI |
-| diffview | Diff viewer & file history |
+| neogit | Native Magit-style git client |
+| diffview | Diff viewer, file history & merge tool |
 | **UI** | |
 | lualine | Status bar |
 | bufferline | Buffer tabs |
@@ -120,7 +120,9 @@ Machine-specific configurations live in `.dotter/`.
 
 | Key | Action |
 |---|---|
-| `<leader>gg` | Open LazyGit |
+| `<leader>gg` | Open Neogit (staging, commits, branches, rebase) |
+| `<leader>gc` | Neogit commit popup |
+| `<leader>gm` | Merge tool — 3-way diff (LOCAL / BASE / REMOTE) |
 | `]g` / `[g` | Next/prev hunk |
 | `<leader>gs` | Stage hunk |
 | `<leader>gS` | Stage buffer |

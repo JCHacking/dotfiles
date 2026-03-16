@@ -7,7 +7,6 @@ packages = [
   "git",
   "gpg",
   "imv",
-  "lazygit",
   "lsd",
   "mako",
   "nvim",

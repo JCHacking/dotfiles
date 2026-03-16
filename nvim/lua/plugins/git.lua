@@ -67,18 +67,35 @@ return {
       { "<leader>gh", "<cmd>DiffviewFileHistory %<CR>", desc = "File History" },
       { "<leader>gH", "<cmd>DiffviewFileHistory<CR>", desc = "Repo History" },
       { "<leader>gx", "<cmd>DiffviewClose<CR>", desc = "Close Diff View" },
+      { "<leader>gm", "<cmd>DiffviewOpen<CR>", desc = "Merge Tool (3-way)" },
+    },
+    opts = {
+      enhanced_diff_hl = true,
+      view = {
+        merge_tool = {
+          layout = "diff3_mixed",
+          disable_diagnostics = true,
+        },
+      },
     },
   },
 
-  -- GIT UI Menu
+  -- GIT UI (Neogit - native Magit-style client)
   {
-    "kdheepak/lazygit.nvim",
+    "NeogitOrg/neogit",
     dependencies = {
       "nvim-lua/plenary.nvim",
+      "sindrets/diffview.nvim",
     },
-
+    cmd = "Neogit",
     keys = {
-      { "<leader>gg", "<cmd>LazyGit<CR>", desc = "Open/Close GIT UI" },
+      { "<leader>gg", "<cmd>Neogit<CR>", desc = "Open Neogit" },
+      { "<leader>gc", "<cmd>Neogit commit<CR>", desc = "Neogit Commit" },
+    },
+    opts = {
+      integrations = {
+        diffview = true,
+      },
     },
   },
 }
