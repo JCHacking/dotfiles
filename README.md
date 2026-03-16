@@ -159,7 +159,7 @@ Machine-specific configurations live in `.dotter/`.
 | `<C-e>` | Abort completion |
 | `<C-b>` / `<C-f>` | Scroll documentation |
 | `<C-Space>` | Trigger completion manually |
-| `<Tab>` | Accept Copilot suggestion |
+| `<M-Tab>` | Accept Copilot suggestion |
 | `<C-]>` | Dismiss Copilot suggestion |
 | `<M-]>` / `<M-[>` | Next/prev Copilot suggestion |
 

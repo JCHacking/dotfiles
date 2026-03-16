@@ -32,6 +32,15 @@ return {
             highlight = "Directory",
           },
         },
+        close_command = function(bufnum)
+          local bufs = vim.tbl_filter(function(b)
+            return vim.bo[b].buflisted and vim.bo[b].buftype == "" and b ~= bufnum
+          end, vim.api.nvim_list_bufs())
+          if #bufs > 0 then
+            vim.api.nvim_set_current_buf(bufs[1])
+          end
+          vim.cmd("bd " .. bufnum)
+        end,
       },
     },
     config = function(_, opts)
