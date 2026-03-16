@@ -7,6 +7,10 @@ return {
       { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash treesitter select" },
       { "r", mode = "o", function() require("flash").remote() end, desc = "Flash remote" },
     },
+    config = function()
+      require("flash").setup()
+      vim.api.nvim_set_hl(0, "FlashLabel", { bg = "#ff9800", fg = "#000000", bold = true })
+    end,
   },
 
   {
