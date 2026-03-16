@@ -20,6 +20,8 @@
 
 [fetch]
     fsckobjects = true
+    prune = true
+    pruneTags = true
 
 [filter "lfs"]
     clean = git-lfs clean -- %f
@@ -49,9 +51,18 @@
 
 [push]
     autoSetupRemote = true
+    followTags = true
+
+[branch]
+    sort = -committerdate
 
 [rebase]
+    autoSquash = true
     autoStash = true
+    updateRefs = true
+
+[rerere]
+    enabled = true
 
 [receive]
     fsckobjects = true
