@@ -60,6 +60,10 @@ vim.opt.timeoutlen = 500
 vim.opt.undofile = true -- Enable undo file
 vim.opt.undodir = vim.fn.stdpath("cache") .. "/undo"
 
+-- Whitespace
+vim.opt.list = true
+vim.opt.listchars = { nbsp = "␣" }
+
 -- Folding
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
