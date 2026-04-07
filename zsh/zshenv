@@ -1,6 +1,8 @@
 export VISUAL=nvim
 export EDITOR=nvim
 
+export NODE_EXTRA_CA_CERTS="/etc/ssl/certs/ca-certificates.crt"
+
 typeset -U path
 path+=("$HOME/.cargo/bin")
 path+=("$HOME/.local/bin")
