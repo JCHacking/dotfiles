@@ -1,5 +1,6 @@
-# Claude
+# AI
 .claude/settings.local.json
+.gemini/settings.json
 
 # Direnv
 .direnv/
