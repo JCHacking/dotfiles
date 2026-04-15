@@ -21,3 +21,7 @@ alias sftp-nosec="sftp -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile=/dev
 
 # Alias for task (Because go-task rename binary name)
 alias task="go-task"
+
+# Alias for AI
+alias claude-costs="npx --yes ccusage@latest"
+claude-agents() { claude --system-prompt "$(cat AGENTS.md)" "$@" }
