@@ -24,4 +24,3 @@ alias task="go-task"
 
 # Alias for AI
 alias claude-costs="npx --yes ccusage@latest"
-claude-agents() { claude --system-prompt "$(cat AGENTS.md)" "$@" }
