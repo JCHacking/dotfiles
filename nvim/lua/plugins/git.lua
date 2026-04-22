@@ -102,7 +102,7 @@ return {
       { "<leader>gc", "<cmd>Neogit commit<CR>", desc = "Neogit Commit" },
     },
     opts = {
-      kind = "tab",
+      kind = "floating",
       integrations = {
         diffview = true,
       },
