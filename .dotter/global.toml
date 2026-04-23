@@ -44,6 +44,9 @@ git.email = "juancruzmencia@gmail.com"
 "nvim/init.lua" = "~/.config/nvim/init.lua"
 "nvim/.stylua.toml" = "~/.config/nvim/.stylua.toml"
 
+[opencode.files]
+"opencode/config.json" = "~/.config/opencode/config.json"
+
 [podman.files]
 "podman/storage.conf" = "~/.config/containers/storage.conf"
 

@@ -10,6 +10,7 @@ packages = [
   "lsd",
   "mako",
   "nvim",
+  "opencode",
   "podman",
   "ssh",
   "starship",
