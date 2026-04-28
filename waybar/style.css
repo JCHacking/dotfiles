@@ -27,6 +27,7 @@ window#waybar {
 #workspaces button,
 #scratchpad,
 #mode,
+#custom-recorder,
 #clock,
 #language,
 #cpu,
@@ -52,6 +53,7 @@ window#waybar {
 
 #workspaces button.urgent,
 #mode,
+#custom-recorder,
 #cpu.critical,
 #memory.critical,
 #disk.critical,

@@ -127,6 +127,9 @@ bindsym Print exec grimshot --cursor --wait 5 --notify copy anything
 bindsym $mod+Print exec grimshot --cursor --wait 5 --notify save anything ~/Screenshots/$(date +%Y-%m-%dT%H:%M:%S).png
 bindsym Shift+Print exec grimshot --cursor --wait 5 save anything - | swappy -f -
 
+# Recorder
+bindsym Control+$mod+Print exec pkill -SIGINT wf-recorder || wf-recorder --geometry "$(slurp)" -f ~/Screenshots/$(date +%Y-%m-%dT%H:%M:%S).mp4
+
 # Shutdown
 set $mode_system "SYSTEM -(S)Poweroff -(R)Reboot -(L)Lock"
 bindsym $mod+Shift+e mode $mode_system
