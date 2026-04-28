@@ -33,6 +33,7 @@ return {
     opts = {
       formatters_by_ft = {
         json = { "prettier" },
+        jsonc = { "prettier" },
         lua = { "stylua" },
         markdown = { "prettier" },
         python = { "ruff_format" },
