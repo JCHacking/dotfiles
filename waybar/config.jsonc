@@ -1,166 +1,159 @@
 {
-    "layer": "bottom",
-    "position": "top",
+  "layer": "bottom",
+  "position": "top",
 
-    "modules-left": [
-        "sway/workspaces",
-        "sway/scratchpad",
-        "sway/mode"
-    ],
-    "modules-center": [
-        "clock"
-    ],
-    "modules-right": [
-        "cpu",
-        "memory",
-        "disk#root",
-        "disk#home",
-        "disk#virt",
-        "network",
-	    "sway/language",
-        "pulseaudio",
-        "battery",
-        "tray"
-    ],
+  "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "disk#root",
+    "disk#home",
+    "disk#virt",
+    "network",
+    "sway/language",
+    "pulseaudio",
+    "battery",
+    "tray",
+  ],
 
-    "sway/workspaces": {
-	    "all-outputs": false
+  "sway/workspaces": {
+    "all-outputs": false,
+  },
+
+  "sway/scratchpad": {
+    "format": "  {count}",
+  },
+
+  "sway/mode": {
+    "format": "{}",
+    "tooltip": false,
+  },
+
+  "clock": {
+    "format": "{:%a %d-%m-%y %H:%M}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "iso8601": true,
+      "format": {
+        "months": "<span color='#1976d2'><b>{}</b></span>",
+        "weekdays": "<span color='#1976d2'><b>{}</b></span>",
+        "days": "<span color='#fafafa'><b>{}</b></span>",
+        "today": "<span color='#1976d2'><b>{}</b></span>",
+        "weeks": "<span color='#1976d2'><b>{}</b></span>",
+      },
+      "weeks-pos": "right",
+      "on-scroll": 1,
     },
 
-    "sway/scratchpad": {
-	    "format": "  {count}"
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+      "on-click-middle": "shift_reset",
+    },
+  },
+
+  "cpu": {
+    "interval": 5,
+
+    "format": "{icon} {usage:2}%",
+    "format-icons": {
+      "default": "",
     },
 
-    "sway/mode": {
-        "format": "{}",
-        "tooltip": false
+    "states": {
+      "critical": 90,
+    },
+  },
+
+  "memory": {
+    "interval": 5,
+
+    "format": "{icon} {percentage}%/{swapPercentage}%",
+    "format-icons": {
+      "default": "",
+    },
+    "tooltip-format": "Mem: {used:0.2f}GiB used\nSwap: {swapUsed:0.2f}GiB used",
+
+    "states": {
+      "critical": 90,
+    },
+  },
+
+  "disk#root": {
+    "path": "/",
+    "format": " {percentage_used}%",
+    "states": {
+      "critical": 90,
+    },
+  },
+  "disk#home": {
+    "path": "/home",
+    "format": " {percentage_used}%",
+    "states": {
+      "critical": 90,
+    },
+  },
+  "disk#virt": {
+    "path": "/mnt/virt",
+    "format": " {percentage_used}%",
+    "states": {
+      "critical": 90,
+    },
+  },
+
+  "network": {
+    "interval": 5,
+
+    "format-ethernet": "  ↑ {bandwidthUpBits} ↓ {bandwidthDownBits}",
+    "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr} via {gwaddr}",
+
+    "format-wifi": "  ↑ {bandwidthUpBits} ↓ {bandwidthDownBits}",
+    "tooltip-format-wifi": "{ifname}: {essid} {ipaddr}/{cidr} via {gwaddr}",
+  },
+
+  "sway/language": {
+    "format": "  {short}",
+    "tooltip-format": "{short}",
+
+    "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume:2}%",
+    "format-muted": "  MUTE",
+
+    "format-icons": {
+      "headphone": " ",
+      "default": [" ", " ", " "],
     },
 
-    "clock": {
-	    "format": "{:%a %d-%m-%y %H:%M}",
-        "tooltip-format": "<tt>{calendar}</tt>",
+    "tooltip-format": "{volume:2}%",
 
-        "calendar": {
-            "mode": "month",
-            "mode-mon-col": 3,
-            "iso8601": true,
-            "format": {
-                "months": "<span color='#1976d2'><b>{}</b></span>",
-                "weekdays": "<span color='#1976d2'><b>{}</b></span>",
-                "days": "<span color='#fafafa'><b>{}</b></span>",
-                "today": "<span color='#1976d2'><b>{}</b></span>",
-                "weeks": "<span color='#1976d2'><b>{}</b></span>"
-            },
-            "weeks-pos": "right",
-            "on-scroll": 1,
-        },
+    "on-click": "pavucontrol",
+    "on-click-right": "pamixer -t",
+  },
 
-        "actions": {
-            "on-click-right": "mode",
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down",
-            "on-click-middle": "shift_reset"
-        }
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": [" ", " ", " ", " "],
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-full": " {capacity}%",
+
+    "states": {
+      "good": 75,
+      "warning": 30,
+      "critical": 15,
     },
+  },
 
-    "cpu": {
-        "interval": 5,
-
-        "format": "{icon} {usage:2}%",
-        "format-icons": {
-            "default": ""
-        },
-
-        "states": {
-            "critical": 90
-        }
-    },
-
-    "memory": {
-        "interval": 5,
-
-        "format": "{icon} {percentage}%/{swapPercentage}%",
-        "format-icons": {
-            "default": ""
-        },
-        "tooltip-format": "Mem: {used:0.2f}GiB used\nSwap: {swapUsed:0.2f}GiB used",
-
-        "states": {
-            "critical": 90
-        }
-    },
-
-    "disk#root": {
-        "path": "/",
-        "format": " {percentage_used}%",
-        "states": {
-            "critical": 90
-        }
-    },
-    "disk#home": {
-        "path": "/home",
-        "format": " {percentage_used}%",
-        "states": {
-            "critical": 90
-        }
-    },
-    "disk#virt": {
-        "path": "/mnt/virt",
-        "format": " {percentage_used}%",
-        "states": {
-            "critical": 90
-        }
-    },
-
-    "network": {
-        "interval": 5,
-
-        "format-ethernet": "  ↑ {bandwidthUpBits} ↓ {bandwidthDownBits}",
-        "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr} via {gwaddr}",
-
-        "format-wifi": "  ↑ {bandwidthUpBits} ↓ {bandwidthDownBits}",
-        "tooltip-format-wifi": "{ifname}: {essid} {ipaddr}/{cidr} via {gwaddr}"
-    },
-
-    "sway/language": {
-	    "format": "  {short}",
-        "tooltip-format": "{short}",
-
-        "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
-    },
-
-    "pulseaudio": {
-        "format": "{icon} {volume:2}%",
-        "format-muted": "  MUTE",
-
-        "format-icons": {
-            "headphone": " ",
-            "default": [ " ", " ", " " ]
-        },
-
-        "tooltip-format": "{volume:2}%",
-
-        "on-click": "pavucontrol",
-        "on-click-right": "pamixer -t"
-    },
-
-    "battery": {
-        "format": "{icon} {capacity}%",
-        "format-icons": [" ", " ", " ", " "],
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-full": " {capacity}%",
-
-        "states": {
-            "good": 75,
-            "warning": 30,
-            "critical": 15
-        }
-    },
-
-    "tray": {
-        "icon-size": 18,
-        "spacing": 5
-    }
+  "tray": {
+    "icon-size": 18,
+    "spacing": 5,
+  },
 }
-
