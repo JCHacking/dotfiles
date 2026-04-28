@@ -12,9 +12,6 @@ alias grep="rg --no-ignore --hidden --pcre2"
 alias ls="lsd --long --git"
 alias tree="ls --tree"
 
-# Alias for citrix
-alias citrix="/opt/Citrix/ICAClient/wfica"
-
 # Add ssh aliases
 alias ssh-nosec="ssh -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile=/dev/null' -o 'LogLevel=ERROR'"
 alias sftp-nosec="sftp -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile=/dev/null' -o 'LogLevel=ERROR'"
@@ -24,3 +21,4 @@ alias task="go-task"
 
 # Alias for AI
 alias claude-costs="npx --yes ccusage@latest"
+alias opencode-costs="npx --yes @ccusage/opencode@latest"
