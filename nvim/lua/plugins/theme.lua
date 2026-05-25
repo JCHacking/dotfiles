@@ -23,6 +23,7 @@ return {
           "markdown",
           "python",
           "rust",
+          "svelte",
           "toml",
           "yaml",
         },

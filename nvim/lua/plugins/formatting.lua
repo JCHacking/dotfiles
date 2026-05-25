@@ -38,6 +38,7 @@ return {
         markdown = { "prettier" },
         python = { "ruff_format" },
         rust = { "rustfmt" },
+        svelte = { "prettier" },
         yaml = { "prettier" },
       },
     },
