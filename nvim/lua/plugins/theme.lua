@@ -12,24 +12,23 @@ return {
   -- Syntax Highlighting
   {
     "nvim-treesitter/nvim-treesitter",
+    lazy = false,
     build = ":TSUpdate",
-    event = { "BufReadPre", "BufNewFile" },
     config = function()
-      require("nvim-treesitter").setup({
-        ensure_installed = {
-          "bash",
-          "json",
-          "lua",
-          "markdown",
-          "python",
-          "rust",
-          "svelte",
-          "toml",
-          "yaml",
-        },
-        auto_install = true,
-        highlight = { enable = true },
-        indent = { enable = true },
+      require("nvim-treesitter").install({
+        "bash",
+        "css",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "markdown",
+        "python",
+        "rust",
+        "svelte",
+        "toml",
+        "typescript",
+        "yaml",
       })
     end,
   },
