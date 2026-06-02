@@ -17,7 +17,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "basedpyright", "ruff", "rust_analyzer", "svelte" },
+        ensure_installed = { "lua_ls", "basedpyright", "ruff", "rust_analyzer", "svelte", "ts_ls", "html", "cssls" },
         automatic_installation = true,
       })
     end,
@@ -28,7 +28,7 @@ return {
     event = "VeryLazy",
     dependencies = { "williamboman/mason.nvim" },
     opts = {
-      ensure_installed = { "stylua", "ruff", "prettier" },
+      ensure_installed = { "stylua", "ruff", "prettier", "biome" },
       auto_update = false,
       run_on_start = true,
     },
@@ -70,7 +70,7 @@ return {
         },
       })
 
-      vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "rust_analyzer", "svelte" })
+      vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "rust_analyzer", "svelte", "ts_ls", "html", "cssls" })
 
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("UserLspAttach", { clear = true }),

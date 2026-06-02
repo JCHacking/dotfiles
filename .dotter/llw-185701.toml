@@ -26,6 +26,7 @@ packages = [
 ]
 
 [files]
+"opencode/opencode.llw-185701.json" = "~/.config/opencode/opencode.json"
 "sway/monitor.llw-185701" = "~/.config/sway/monitor"
 
 [variables]

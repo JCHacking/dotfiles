@@ -6,7 +6,12 @@ return {
       local lint = require("lint")
 
       lint.linters_by_ft = {
+        javascript = { "biomejs" },
+        javascriptreact = { "biomejs" },
         python = { "ruff" },
+        svelte = { "biomejs" },
+        typescript = { "biomejs" },
+        typescriptreact = { "biomejs" },
       }
 
       vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
@@ -32,13 +37,20 @@ return {
     },
     opts = {
       formatters_by_ft = {
-        json = { "prettier" },
-        jsonc = { "prettier" },
+        css = { "prettier" },
+        html = { "prettier" },
+        javascript = { "biome" },
+        javascriptreact = { "biome" },
+        json = { "biome" },
+        jsonc = { "biome" },
         lua = { "stylua" },
         markdown = { "prettier" },
         python = { "ruff_format" },
         rust = { "rustfmt" },
+        scss = { "prettier" },
         svelte = { "prettier" },
+        typescript = { "biome" },
+        typescriptreact = { "biome" },
         yaml = { "prettier" },
       },
     },
