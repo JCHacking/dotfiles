@@ -1,7 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "autoupdate": false,
-  "plugin": ["@simonwjackson/opencode-direnv"]"
-  "mcp": {
-  }
+  "plugin": ["@simonwjackson/opencode-direnv"]
 }
