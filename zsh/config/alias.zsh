@@ -21,4 +21,4 @@ alias task="go-task"
 
 # Alias for AI
 alias claude-costs="npx --yes ccusage@latest"
-alias opencode-costs="npx --yes @ccusage/opencode@latest"
+alias opencode-costs="npx --yes ccusage@latest opencode"
