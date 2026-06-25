@@ -16,9 +16,6 @@ alias tree="ls --tree"
 alias ssh-nosec="ssh -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile=/dev/null' -o 'LogLevel=ERROR'"
 alias sftp-nosec="sftp -o 'StrictHostKeyChecking=no' -o 'UserKnownHostsFile=/dev/null' -o 'LogLevel=ERROR'"
 
-# Alias for task (Because go-task rename binary name)
-alias task="go-task"
-
 # Alias for AI
 alias claude-costs="npx --yes ccusage@latest"
 alias opencode-costs="npx --yes ccusage@latest opencode"

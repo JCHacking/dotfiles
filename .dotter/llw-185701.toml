@@ -1,5 +1,6 @@
 packages = [
-  "alacritty", 
+  "alacritty",
+  "bin",
   "bat",
   "batsignal",
   "delta",

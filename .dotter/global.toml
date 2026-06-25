@@ -10,6 +10,9 @@ default_target_type = "automatic"
 [batsignal.files]
 "batsignal/batsignal" = "~/.config/batsignal"
 
+[bin.files]
+"bin/task" = "~/.local/bin/task"
+
 [cargo.files]
 "cargo/config.toml" = "~/.cargo/config.toml"
 
@@ -45,7 +48,6 @@ git.email = "juancruzmencia@gmail.com"
 "nvim/.stylua.toml" = "~/.config/nvim/.stylua.toml"
 
 [opencode.files]
-"opencode/AGENTS.md" = "~/.config/opencode/AGENTS.md"
 "opencode/tui.json" = "~/.config/opencode/tui.json"
 
 [podman.files]
@@ -96,4 +98,3 @@ ssh.username = "jchacking"
 "zsh/config" = "~/.config/zsh/"
 "zsh/zshenv" = "~/.zshenv"
 "zsh/zshrc" = "~/.zshrc"
-
