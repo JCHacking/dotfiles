@@ -26,6 +26,7 @@ return {
         "python",
         "rust",
         "svelte",
+        "jinja",
         "toml",
         "typescript",
         "yaml",

@@ -1,5 +1,14 @@
 vim.g.have_nerd_font = true -- Set I have Nerd Font
 
+-- Filetype detection
+vim.filetype.add({
+  extension = {
+    j2 = "jinja",
+    jinja = "jinja",
+    jinja2 = "jinja",
+  },
+})
+
 -- Backup
 vim.opt.directory = vim.fn.stdpath("cache") .. "/swap" -- Swap directory
 vim.opt.backupdir = vim.fn.stdpath("cache") .. "/backup" -- Backup directory
