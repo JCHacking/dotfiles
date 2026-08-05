@@ -27,7 +27,6 @@ packages = [
 ]
 
 [files]
-"opencode/opencode.jchacking-pc.json" = "~/.config/opencode/opencode.json"
 "sway/monitor.jchacking-pc" = "~/.config/sway/monitor"
 
 [variables]
