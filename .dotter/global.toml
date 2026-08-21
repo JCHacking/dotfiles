@@ -48,7 +48,7 @@ git.email = "juancruzmencia@gmail.com"
 "nvim/.stylua.toml" = "~/.config/nvim/.stylua.toml"
 
 [opencode.files]
-"opencode/opencode.json" = "~/.config/opencode/opencode.json"
+"opencode/opencode.json" = { target = "~/.config/opencode/opencode.json", type = "template" }
 "opencode/tui.json" = "~/.config/opencode/tui.json"
 
 [podman.files]
