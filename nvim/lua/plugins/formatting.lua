@@ -14,7 +14,7 @@ return {
         typescriptreact = { "biomejs" },
       }
 
-      vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+      vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave", "FileType" }, {
         callback = function()
           lint.try_lint()
         end,
