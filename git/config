@@ -35,6 +35,9 @@
 [init]
     defaultBranch = main
 
+[lfs]
+    locksVerify = true
+
 [log]
     date = iso-local
 
