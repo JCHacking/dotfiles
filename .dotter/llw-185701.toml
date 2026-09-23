@@ -32,6 +32,6 @@ packages = [
 [variables]
 hardware.hasBattery = true
 hardware.isGraphicNvidia = false
-git.username = "jmencianaranjo-ionos"
+git.username = "jmencianaranjo"
 git.email = "jcmencia@arsys.es"
 ssh.username = "jcmencia"
