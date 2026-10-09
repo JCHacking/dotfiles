@@ -48,10 +48,11 @@ git.email = "juancruzmencia@gmail.com"
 "nvim/.stylua.toml" = "~/.config/nvim/.stylua.toml"
 
 [opencode.files]
+"opencode/cli.json" = "~/.config/opencode/cli.json"
 "opencode/opencode.json" = { target = "~/.config/opencode/opencode.json", type = "template" }
-"opencode/tui.json" = "~/.config/opencode/tui.json"
 
 [podman.files]
+"podman/containers.conf" = "~/.config/containers/containers.conf"
 "podman/storage.conf" = "~/.config/containers/storage.conf"
 
 [ssh.files]

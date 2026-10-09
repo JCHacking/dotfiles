@@ -1,8 +1,11 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "autoupdate": false,
-  "plugin": [
-    "@simonwjackson/opencode-direnv",
-    "opencode-plugin-auto-update"
+  "$schema": "https://opencode.ai/v2/config.json",
+
+  "update": auto,
+
+  "permissions": [
+    { "action": "shell", "resource": "*git push *", "effect": "ask" },
+    { "action": "shell", "resource": "*git commit *", "effect": "ask" },
+    { "action": "shell", "resource": "*git merge *", "effect": "ask" }
   ]
 }
