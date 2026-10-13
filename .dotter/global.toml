@@ -53,6 +53,7 @@ git.email = "juancruzmencia@gmail.com"
 
 [podman.files]
 "podman/containers.conf" = "~/.config/containers/containers.conf"
+"podman/nodocker" = "~/.config/containers/nodocker"
 "podman/storage.conf" = "~/.config/containers/storage.conf"
 
 [ssh.files]
