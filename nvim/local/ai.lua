@@ -8,6 +8,9 @@ return {
     context_window = 8000,
     throttle = 500,
     debounce = 300,
+    virtualtext = {
+      show_on_completion_menu = true,
+    },
     provider_options = {
       openai_compatible = {
         api_key = function()
