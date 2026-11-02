@@ -5,6 +5,9 @@ return {
     provider = "PROVIDER",
     n_completions = 1,
     request_timeout = 5,
+    context_window = 8000,
+    throttle = 500,
+    debounce = 300,
     provider_options = {
       openai_compatible = {
         api_key = function()
@@ -16,7 +19,6 @@ return {
         stream = true,
         optional = {
           max_tokens = 128,
-          chat_template_kwargs = { enable_thinking = false },
         },
       },
     },
