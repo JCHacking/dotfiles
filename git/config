@@ -8,6 +8,9 @@
     }; clone_bare"
     log-pretty = log --graph --pretty=log
 
+[branch]
+    sort = -committerdate
+
 [commit]
     gpgsign = true
     template = ~/.config/git/commit.template.txt
@@ -62,19 +65,16 @@
     autoSetupRemote = true
     followTags = true
 
-[branch]
-    sort = -committerdate
-
 [rebase]
     autoSquash = true
     autoStash = true
     updateRefs = true
 
-[rerere]
-    enabled = true
-
 [receive]
     fsckobjects = true
+
+[rerere]
+    enabled = true
 
 [status]
     submoduleSummary = true
@@ -92,3 +92,6 @@
     email = {{git.email}}
     name = {{git.username}}
     signingkey = {{git.email}}
+
+[worktree]
+    guessRemote = true
