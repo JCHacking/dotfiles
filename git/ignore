@@ -1,13 +1,8 @@
-# AI
-.claude/settings.local.json
-.gemini/settings.json
-
-# Direnv
-.direnv/
-.envrc
-
 # Editor
 .nvim.lua
+
+# Playwright MCP
+.playwright-mcp/
 
 # Python
 __pycache__/
@@ -17,3 +12,4 @@ venv/
 
 # Secrets
 .env
+
