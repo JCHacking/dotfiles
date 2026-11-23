@@ -1,7 +1,35 @@
 {
   "$schema": "https://opencode.ai/v2/config.json",
+  "update": "auto",
+  "warming": false,
 
-  "update": auto,
+  "plugins": [
+    {
+      "package": "@rehydra/opencode",
+      "options": {
+        "envFiles": [
+          "**/.env*",
+          "**/.secrets*",
+          "**/settings*.yaml",
+          "!**/.env.example",
+          "!**/.secrets.example",
+          "!**/settings.yaml.example",
+          "!**/tests/**"
+        ],
+        "disableTypes": ["URL", "IP_ADDRESS", "BIC_SWIFT"]
+      }
+    }
+  ],
+
+  "mcp": {
+    "servers": {
+      "playwright": {
+        "type": "local",
+        "command": ["npx", "@playwright/mcp@latest"],
+        "disabled": true
+      }
+    }
+  },
 
   "permissions": [
     { "action": "shell", "resource": "*git push *", "effect": "ask" },
